@@ -1,5 +1,25 @@
 @import "variables.scss";
 
-body{
-  background: #e1e5e5;
+
+@media @screen--mobile {
+
+
+.page-header__wrap-top{
+  min-height: 66px;
+  border: 1px solid red;
+}
+
+.download__title {
+  margin-top: 25px;
+  margin-bottom: 347px;
+  text-align: center;
+  border: 1px solid red;
+}
+
+.btn--download{
+  margin-bottom: 27px;
+  }
+
+
+
 }
