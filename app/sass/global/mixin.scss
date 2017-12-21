@@ -1,0 +1,14 @@
+@mixin h1 {
+  font-size: $fz--xxlarge;
+  line-height: 1.2;
+  font-weight: $light;
+  color: $c_blue;
+}
+
+
+@mixin h2 {
+  font-size: $fz--large;
+  line-height: 1.2;
+  font-weight: $bold;
+  color: $c_blue;
+}

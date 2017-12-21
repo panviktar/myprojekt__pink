@@ -1,0 +1,26 @@
+html{
+  box-sizing: border-box;
+}
+// Свойства width и height включают в себя значения полей и границ, но не отступов (margin)
+
+body{
+  position: relative;
+  min-width: $screen--mobile;
+  font-size: $fz--base;
+  line-height: 1.2;
+  font-family: $font-family;
+  font-style: $normal;
+  margin: 0;
+  color: $c--blue;
+  background-color: #fff;
+}
+
+
+h1 {
+  @include h1;
+}
+
+
+h2 {
+  @include h1;
+}

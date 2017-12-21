@@ -10,6 +10,7 @@ var gulp       = require('gulp'), // Подключаем Gulp
 	pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
 	cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
 	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+	sassGlob = require('gulp-sass-glob'); // NOTE: Also support using ' (single quotes) for example: @import 'vars/**/*.scss';
 
 gulp.task('sass', function(){ // Создаем таск Sass
 	return gulp.src(['app/sass/**/*.sass', 'app/sass/**/*.scss']) // Берем источник
@@ -44,6 +45,7 @@ gulp.task('css-libs', ['sass'], function() {
 		.pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
 		.pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
 });
+
 
 gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function() {
 	gulp.watch(['app/sass/**/*.sass', 'app/sass/**/*.scss'], ['sass']); // Наблюдение за sass файлами в папке sass

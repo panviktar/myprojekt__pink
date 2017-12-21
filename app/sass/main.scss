@@ -1,5 +1,50 @@
-@import "variables.scss";
+/* ==============================
+=            Global            =
+============================== */
 
-body{
-  background: #e1e5e5;
-}
+@import "_global/variables";
+@import "_global/fonts";
+@import "_global/mixins";
+@import "_global/base";
+
+
+/* =====  End of Global  ====== */
+
+
+/* ==============================
+=            Header            =
+============================== */
+
+@import "_blocks/page-header";
+@import "_blocks/page-nav";
+
+/* =====  End of Header  ====== */
+
+
+/* ===============================
+=            Content            =
+=============================== */
+
+
+
+/* =====  End of Content  ====== */
+
+
+
+/* ==============================
+=            Footer            =
+============================== */
+
+
+
+/* =====  End of Footer  ====== */
+
+
+
+/* =============================
+=            Popup            =
+============================= */
+
+
+
+/* =====  End of Popup  ====== */
