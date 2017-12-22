@@ -2,10 +2,10 @@
 =            Global            =
 ============================== */
 
-@import "_global/variables";
-@import "_global/fonts";
-@import "_global/mixins";
-@import "_global/base";
+@import "global/_variables";
+@import "global/_fonts";
+@import "global/_mixin";
+@import "global/_base";
 
 
 /* =====  End of Global  ====== */
@@ -15,8 +15,8 @@
 =            Header            =
 ============================== */
 
-@import "_blocks/page-header";
-@import "_blocks/page-nav";
+@import "blocks/_page-header";
+@import "blocks/_page-nav";
 
 /* =====  End of Header  ====== */
 

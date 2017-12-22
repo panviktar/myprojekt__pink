@@ -22,8 +22,8 @@ $bg--black-opacity-light: rgba(0, 0, 0, 0.1);
 $bg--black-opacity-dark: rgba(0, 0, 0, 0.5);
 
 
-$c--pink: $bg_pink;
-$c--blue: $bg_blue;
+$c--pink: $bg--pink;
+$c--blue: $bg--blue;
 $c--white-opacity: rgba(255, 255, 255, 0.3);
 $c--black-opacity: rgba(0, 0, 0, 0.3);
 $c--black-opacity-light: rgba(0, 0, 0, 0.1);
@@ -33,15 +33,15 @@ $c--pink-opacity: rgba(210, 40, 86, 0.3);
 $font-family: "Open Sans", Arial, sans-serif;
 
 $fz--base: 18px;
-$fz--xxsmall: ceil($fz_base * 0.66);   /* 12px */
-$fz--xsmall: ceil($fz_base * 0.77);    /* 14px */
-$fz--small: ceil($fz_base * 0.88);     /* 16px */
-$fz--medium: ceil($fz_base * 1.11);    /* 20px */
-$fz--medium-btn: ceil($fz_base * 1.16);/* 21px */
-$fz--xmedium: ceil($fz_base * 1.33);   /* 24px */
-$fz--large: ceil($fz_base * 1.66);     /* 30px */
-$fz--xlarge: ceil($fz_base * 2.22);    /* 40px */
-$fz--xxlarge: ceil($fz_base * 2.77);   /* 50px */
+$fz--xxsmall: ceil($fz--base * 0.66);   /* 12px */
+$fz--xsmall: ceil($fz--base * 0.77);    /* 14px */
+$fz--small: ceil($fz--base * 0.88);     /* 16px */
+$fz--medium: ceil($fz--base * 1.11);    /* 20px */
+$fz--medium-btn: ceil($fz--base * 1.16);/* 21px */
+$fz--xmedium: ceil($fz--base * 1.33);   /* 24px */
+$fz--large: ceil($fz--base * 1.66);     /* 30px */
+$fz--xlarge: ceil($fz--base * 2.22);    /* 40px */
+$fz--xxlarge: ceil($fz--base * 2.77);   /* 50px */
 
 
 $normal: 400;
