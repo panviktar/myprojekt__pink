@@ -1,0 +1,37 @@
+.page-nav {
+  width: 320px;
+  margin: 0 auto;
+  @include clearfix;
+
+  &__logo{
+    float: left;
+  }
+
+  &__wrapper{
+    float: right;
+  }
+
+  &__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item a{
+    text-decoration: none;
+  }
+
+}
+
+@media #{$mobile} {
+
+  }
+
+@media #{$tablet} {
+
+
+}
+
+@media #{$desktop} {
+
+}

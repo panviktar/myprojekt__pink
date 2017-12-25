@@ -1,0 +1,103 @@
+.download{
+  width: 300px;
+
+  &__title {
+    display: block;
+    text-align: center;
+  }
+
+  &__btn-wrap {
+
+  }
+
+  &__logo {
+
+  }
+
+  &__info {
+    font-weight: $light;
+    font-size: $fz--base;
+  }
+}
+.btn--download{
+  font-size: $fz--base;
+  text-decoration: none;
+  color: #fff;
+  }
+
+
+@media #{$mobile} {
+  .download {
+    width: 280px;
+    margin: 0 auto;
+
+    &__title {
+      padding-top: 25px;
+      @include h2-mobile;
+    }
+
+    &__btn-wrap {
+      margin-top: 345px;
+      margin-bottom: 27px;
+    }
+
+    &__logo {
+      margin-bottom: 25px;
+    }
+
+    &__info {
+      padding-bottom: 33px;
+      font-size: $fz--xsmall;
+    }
+  }
+}
+
+@media #{$tablet} {
+
+  .download {
+
+    &__title {
+      padding: 102px 60px 60px 0;
+      @include h2-tablet;
+    }
+
+    &__btn-wrap {
+      margin-top: 45px;
+      margin-bottom: 40px;
+    }
+
+    &__logo {
+      margin-bottom: 40px;
+    }
+
+    &__info {
+      padding-bottom: 112px;
+    }
+  }
+}
+
+@media #{$desktop} {
+  .download {
+    &__title {
+      width: 300px;
+      padding: 120px 0 0 0;
+      @include h2-dekstop;
+    }
+
+    &__btn-wrap {
+      margin-top: 55px;
+      margin-bottom: 65px;
+    }
+
+    &__logo {
+      margin-bottom: 55px;
+    }
+
+    &__info {
+      padding-bottom: 125px;
+      }
+  }
+  .btn--download{
+    font-size: $fz--xmedium;
+    }
+}

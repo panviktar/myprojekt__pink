@@ -1,8 +1,29 @@
-$screen--mobile: 320px;
-$screen--small:  700px;
-$screen--medium: 1200px;
-$screen--big:    1440px;
 
+// Размер viewport
+
+$screen--mobile: 320px;
+$screen--tablet:  700px;
+$screen--desktop: 1200px;
+
+
+// $mobile: "only screen and (max-width: "$screen--tablet - 1")";
+// $mobile-tablet: "only screen and (max-width: "$screen--desktop - 1")";
+// $tablet: "only screen and (min-width: "$screen--tablet") and (max-width: "$screen--desktop - 1")";
+// $tablet-desktop: "only screen and (min-width: "$screen--tablet")";
+// $desktop: "only screen and (min-width: "$screen--desktop")";
+// На всякий случай. Точные размеры viewport, но нужно прописывать все стили для каждого
+
+$mobile: "(max-width: "$screen--tablet - 1")";
+$tablet: "(min-width: "$screen--tablet")";
+$desktop: "(min-width: "$screen--desktop")";
+
+
+// padding
+$offset--mobile: 20px;
+$offset--tablet: 40px;
+$offset--desktop: 40px;
+
+// Цвет фона
 $bg--gray: #f2f2f2;
 $bg--gray-light: #e5e5e5;
 $bg--gray-darker: #dddfe0;
@@ -21,7 +42,7 @@ $bg--black-opacity: rgba(0, 0, 0, 0.3);
 $bg--black-opacity-light: rgba(0, 0, 0, 0.1);
 $bg--black-opacity-dark: rgba(0, 0, 0, 0.5);
 
-
+// Цвет текста
 $c--pink: $bg--pink;
 $c--blue: $bg--blue;
 $c--white-opacity: rgba(255, 255, 255, 0.3);
@@ -30,8 +51,12 @@ $c--black-opacity-light: rgba(0, 0, 0, 0.1);
 $c--blue-opacity: rgba(40, 54, 69, 0.3);
 $c--pink-opacity: rgba(210, 40, 86, 0.3);
 
+
+// Шрифты
+
 $font-family: "Open Sans", Arial, sans-serif;
 
+// Размер шрифта
 $fz--base: 18px;
 $fz--xxsmall: ceil($fz--base * 0.66);   /* 12px */
 $fz--xsmall: ceil($fz--base * 0.77);    /* 14px */
@@ -43,7 +68,7 @@ $fz--large: ceil($fz--base * 1.66);     /* 30px */
 $fz--xlarge: ceil($fz--base * 2.22);    /* 40px */
 $fz--xxlarge: ceil($fz--base * 2.77);   /* 50px */
 
-
+// Жирность шрифта
 $normal: 400;
 $bold:   700;
 $light:  300;

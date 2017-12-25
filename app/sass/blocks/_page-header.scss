@@ -1,0 +1,29 @@
+.visually-hidden {
+  @include text-hide;
+}
+
+.page-header {
+  @include container;
+  background: $bg--dark;
+  color: #fff;
+
+  &__wrap-top {
+    min-height: 65px;
+  }
+
+}
+@media #{$mobile} {}
+@media #{$tablet} {
+  .page-header {
+    &__wrap-top {
+      min-height: 110px;
+    }
+  }
+}
+@media #{$desktop} {
+  .page-header {
+    &__wrap-top {
+      min-height: 110px;
+    }
+  }
+}

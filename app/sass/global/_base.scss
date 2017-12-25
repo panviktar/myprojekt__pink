@@ -17,13 +17,3 @@ body{
   color: $c--blue;
   background-color: #fff;
 }
-
-
-h1 {
-  @include h1;
-}
-
-
-h2 {
-  @include h1;
-}

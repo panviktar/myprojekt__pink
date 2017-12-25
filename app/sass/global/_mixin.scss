@@ -1,3 +1,6 @@
+@import "_variables";
+
+
 @mixin h1 {
   font-size: $fz--xxlarge;
   line-height: 1.2;
@@ -6,9 +9,80 @@
 }
 
 
-@mixin h2 {
-  font-size: $fz--large;
+@mixin h2-mobile {
+  font-size: $fz--xmedium;
   line-height: 1.2;
-  font-weight: $bold;
+  font-weight: $light;
   color: $c--blue;
+}
+
+@mixin h2-tablet {
+  font-size: $fz--xlarge;
+  line-height: 1.2;
+  font-weight: $light;
+  color: $c--blue;
+}
+
+@mixin h2-dekstop {
+  font-size: $fz--xxlarge;
+  line-height: 1.2;
+  font-weight: $light;
+  color: $c--blue;
+}
+
+@mixin container {
+  margin: 0 auto;
+  min-width: $screen--mobile;
+  max-width: $screen--desktop;
+  padding-left: $offset--mobile;
+  padding-right: $offset--mobile;
+
+
+  @media #{$tablet} {
+    min-width: $screen--tablet;
+    padding-left: $offset--tablet;
+    padding-right: $offset--tablet;
+  }
+
+
+  @media #{$desktop} {
+    min-width: $screen--desktop;
+    padding-left: $offset--desktop;
+    padding-right: $offset--desktop;
+  }
+}
+
+
+@mixin link {
+  color: $c--pink;
+  text-decoration: none;
+  transition: all 0.3s;
+
+
+  &:hover {
+    color: $c--blue;
+    text-decoration: underline;
+  }
+
+
+  &:active {
+    color: $c--blue-opacity;
+    text-decoration: none;
+  }
+}
+
+
+@mixin text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+}
+
+
+@mixin clearfix() {
+  &::after{
+    content: "";
+    clear: both;
+    display: table;
+  }
 }
