@@ -30,6 +30,27 @@
   color: $c--blue;
 }
 
+@mixin h3-mobile {
+  font-size: $fz--base;
+  line-height: 1.2;
+  font-weight: $bold;
+  color: #000;
+}
+
+@mixin h3-tablet {
+  font-size: $fz--base;
+  line-height: 1.2;
+  font-weight: $bold;
+  color: #000;
+}
+
+@mixin h3-dekstop {
+  font-size: $fz--large;
+  line-height: 1.2;
+  font-weight: $bold;
+  color: #000;
+}
+
 @mixin container {
   margin: 0 auto;
   min-width: $screen--mobile;

@@ -2,12 +2,14 @@
   width: 320px;
   margin: 0 auto;
   @include clearfix;
+  background: $bg--dark;
+;
 
   &__logo{
     float: left;
   }
 
-  &__wrapper{
+  &__list{
     float: right;
   }
 
@@ -24,14 +26,45 @@
 }
 
 @media #{$mobile} {
-
+  .page-nav{
+    width: 320px;
+    margin: 0 auto;
+    &__logo{
+      width: 80px;
+    }
   }
+}
 
 @media #{$tablet} {
+  .page-nav{
+    width: auto;
+    margin: 0;
 
-
+    &__wrapper{
+      @include container;
+    }
+    &__logo{
+      width: 150px;
+    }
+}
 }
 
 @media #{$desktop} {
+  .page-nav{
+    width: auto;
+    margin: 0;
 
+    &__wrapper{
+      @include container;
+    }
+    &__logo{
+      width: 150px;
+    }
+    &__list{
+      width: 620px;
+    }
+    &__item{
+      display: inline-block;
+    }
+}
 }

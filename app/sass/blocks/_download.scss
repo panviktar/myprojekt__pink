@@ -1,5 +1,6 @@
 .download{
   width: 300px;
+  @include container;
 
   &__title {
     display: block;

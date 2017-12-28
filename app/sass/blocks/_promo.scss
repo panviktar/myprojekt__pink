@@ -1,0 +1,127 @@
+.promo{
+
+    &__title{
+      text-align: center;
+    }
+    &__info{
+      position: relative;
+    }
+  }
+
+@media #{$mobile} {
+  .promo{
+      text-align: center;
+
+    &__title{
+      @include h2-mobile;
+      padding: 0 35px;
+    }
+
+    &__title--top{
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+
+    &__title--bottom{
+        padding-bottom: 30px;
+    }
+
+    &__item{
+      margin-bottom: 35px;
+    }
+
+    &__item-title{
+      @include h3-mobile;
+    }
+
+    &__item:first-child{
+      padding-top: 90px;
+    }
+
+    &__item:last-child{
+      padding-bottom: 290px;
+    }
+  }
+}
+
+@media #{$tablet} {
+  .promo{
+    text-align: left;
+
+    &__title{
+      @include h2-tablet;
+      }
+
+      &__title--top{
+        padding-top: 40px;
+      }
+
+    &__title--bottom{
+      padding: 0 140px 40px 140px;
+      margin-top: -30px;
+      }
+
+    &__info{
+      padding-left: 350px;
+    }
+
+    &__item{
+      margin-bottom: 45px;
+      width: 310px;
+    }
+
+    &__item-title{
+      @include h3-tablet;
+    }
+
+    &__item:first-child{
+      padding-top: 80px;
+    }
+
+
+    }
+  }
+
+@media #{$desktop} {
+  .promo{
+      text-align: center;
+
+    &__title{
+      @include h2-dekstop;
+      }
+    &__title--top{
+        padding-top: 75px;
+      }
+
+    &__title--bottom{
+      padding: 0 240px 75px 240px;
+      }
+
+      &__info{
+        @include container;
+        padding-bottom: 70px;
+        padding-top: 355px;
+      }
+
+      &__item{
+        display: inline-block;
+        vertical-align: top;
+        width: 300px;
+        margin-right: 20px;
+
+      }
+
+      &__item-title{
+        @include h3-dekstop;
+      }
+
+      &__item:first-child{
+        padding: 0;
+      }
+
+      &__item:last-child{
+
+        margin-right: 0;
+      }
+  }
+}
