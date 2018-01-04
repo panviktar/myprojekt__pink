@@ -1,9 +1,6 @@
 .effect {
     @include container;
 
-  &__wrap{
-
-    }
 
   &__logo {
     border: 1px solid #000;
@@ -14,20 +11,29 @@
   &__info {
     display: inline-block;
     vertical-align: top;
+  }
 
+  &__text {
+    line-height: 1.7;
+  }
+
+  &__link{
+    @include link;
+    text-decoration: underline;
   }
 }
 
 @media #{$mobile} {
   .effect {
-    display: none;
+    @include text-hide;
     }
   }
 
 @media #{$tablet} {
   .effect {
     &__wrap {
-      margin-top: 56px;
+    margin-top: 56px;
+    padding-bottom: 80px;
       }
 
     &__logo{
@@ -49,15 +55,19 @@
 
     &__text{
       font-size: $fz--xsmall;
-      line-height: 1.7;
       }
+    &__link {
+      display: block;
+      margin-top: 20px;
+    }
     }
   }
 
 @media #{$desktop} {
   .effect {
     &__wrap {
-      margin-top: 70px;
+      margin-top: 67px;
+      margin-bottom: 67px;
       }
 
     &__logo{
@@ -71,11 +81,14 @@
       }
     &__title{
       @include h3-dekstop ;
-
       }
+
     &__text{
       padding-right: 60px;
-      line-height: 1.7;
+      }
+    &__link {
+      display: block;
+      margin-top: 40px;
       }
     }
   }
