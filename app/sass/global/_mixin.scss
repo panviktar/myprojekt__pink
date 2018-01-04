@@ -21,6 +21,8 @@
   line-height: 1.2;
   font-weight: $light;
   color: $c--blue;
+  margin: 0;
+  padding: 0;
 }
 
 @mixin h2-dekstop {
@@ -28,6 +30,8 @@
   line-height: 1.2;
   font-weight: $light;
   color: $c--blue;
+  margin: 0;
+  padding: 0;
 }
 
 @mixin h3-mobile {
@@ -35,6 +39,8 @@
   line-height: 1.2;
   font-weight: $bold;
   color: #000;
+  margin: 0;
+  padding: 0;
 }
 
 @mixin h3-tablet {
@@ -42,6 +48,8 @@
   line-height: 1.2;
   font-weight: $bold;
   color: #000;
+  margin: 0;
+  padding: 0;
 }
 
 @mixin h3-dekstop {

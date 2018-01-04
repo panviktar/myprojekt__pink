@@ -1,0 +1,81 @@
+.effect {
+    @include container;
+
+  &__wrap{
+
+    }
+
+  &__logo {
+    border: 1px solid #000;
+    display: inline-block;
+    vertical-align: top;
+    }
+
+  &__info {
+    display: inline-block;
+    vertical-align: top;
+
+  }
+}
+
+@media #{$mobile} {
+  .effect {
+    display: none;
+    }
+  }
+
+@media #{$tablet} {
+  .effect {
+    &__wrap {
+      margin-top: 56px;
+      }
+
+    &__logo{
+      width: 262px;
+      min-height: 305px;
+      margin-right: 40px;
+      }
+
+    &__info{
+        width: 300px;
+        padding-top: 45px;
+      }
+
+    &__title{
+      @include h3-tablet;
+      font-size: $fz--large;
+      padding-right: 100px;
+      }
+
+    &__text{
+      font-size: $fz--xsmall;
+      line-height: 1.7;
+      }
+    }
+  }
+
+@media #{$desktop} {
+  .effect {
+    &__wrap {
+      margin-top: 70px;
+      }
+
+    &__logo{
+      width: 302px;
+      min-height: 345px;
+      margin-right: 55px;
+      }
+    &__info{
+      width: 575px;
+      padding-top: 95px;
+      }
+    &__title{
+      @include h3-dekstop ;
+
+      }
+    &__text{
+      padding-right: 60px;
+      line-height: 1.7;
+      }
+    }
+  }
