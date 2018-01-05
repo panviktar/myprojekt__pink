@@ -1,0 +1,120 @@
+.contacts {
+
+  text-align: center;
+
+  &__columns{
+    @include container;
+  }
+
+  &__info a {
+    @include link;
+    font-weight: $light;
+    margin-top: 5px;
+    display: block;
+  }
+  &__map{
+background: #e1e1e1;
+  }
+}
+@media #{$mobile} {
+  .contacts {
+    padding-top: 45px;
+    padding-bottom: 35px;
+
+    &__title {
+      @include h2-mobile;
+      padding-bottom: 35px;
+    }
+
+    &__info {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    &__info a {
+      font-size: $fz--xmedium;
+    }
+    &__map{
+    min-height: 200px;
+    }
+
+  }
+}
+
+@media #{$tablet} {
+  .contacts{
+    padding-top: 50px;
+    padding-bottom: 25px;
+
+  &__title {
+    @include h2-tablet;
+    padding-bottom: 45px;
+  }
+
+  &__mail,
+  &__phone{
+  display: inline-block;
+  width: 190px;
+  vertical-align: top;
+}
+
+  &__phone{
+    margin-right: 120px;
+  }
+
+  &__info {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__adres{
+    margin-top: 40px;
+  }
+
+  &__info a {
+    font-size: $fz--xmedium;
+  }
+  &__map{
+min-height: 380px;
+  }
+}
+}
+@media #{$desktop} {
+  .contacts{
+    padding-top: 75px;
+
+  &__title {
+    @include h2-dekstop;
+    padding-bottom: 55px;
+  }
+
+  &__mail,
+  &__phone  {
+  display: inline-block;
+  width: 300px;
+  vertical-align: top;
+  }
+
+  &__phone{
+    margin-right: 340px;
+  }
+
+  &__adres{
+    margin-top: -95px;
+  }
+
+  &__info {
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 25px;
+  }
+
+  &__info a {
+    font-size: $fz--xmedium;
+
+  }
+  &__map{
+min-height: 525px;
+  }
+}
+}

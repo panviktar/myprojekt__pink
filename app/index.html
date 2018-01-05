@@ -124,11 +124,14 @@
 				<input type="radio" name="reviews" id="review-input-2" class="slider-reviews__input">
 				<input type="radio" name="reviews" id="review-input-3" class="slider-reviews__input">
 				<div class="reviews__list">
-					<blockquote class="reviews__item">
-						<cite class="review__author-name">
+					<blockquote class="reviews__item  reviews__item--1">
+						<div class="reviews__author">
+						<cite class="reviews__author-name">
 							Николай Петров
 						</cite>
-						<p> «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!» </p>
+						<p class="reviews__author-discription"> 25 лет, водитель трамвая </p>
+						</div>
+						<p class="reviews__author-quote"> «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!» </p>
 					</blockquote>
 				</div>
 			</div>
@@ -179,17 +182,19 @@
 				Свяжитесь с нами! </h2>
 			<div class="contacts__columns">
 				<div class="contacts__phone">
-					<span> <b> Звоните: </b> </span>
-					<span class="contacts__info"> 8 (800) 1000 900 </span>
+					<span> <b> Звоните: </b> </span> <br>
+					<span class="contacts__info"> <a href="tel:8 (800) 1000 900"> 8 (800) 1000 900 </a> </span>
 				</div>
-				<div class="contacts__adres">
-					<span> <b> Приезжайте в гости: </b> </span>
-					<span class="contacts__info"> Санкт-Петербург, <br>
-						Невский проспект, д. 20 </span>
-				</div>
+
 				<div class="contacts__mail">
-					<span> <b> Пишите: </b> </span>
-					<span class="contacts__info"> hello@pinkapp.ru </span>
+					<span> <b> Пишите: </b> </span> <br>
+					<span class="contacts__info"> <a href="mailto:hello@pinkapp.ru"> hello@pinkapp.ru </a> </span>
+				</div>
+
+				<div class="contacts__adres">
+					<span> <b> Приезжайте в гости: </b> </span> <br>
+					<span class="contacts__info"> <a href="#"> Санкт-Петербург, <br>
+						Невский проспект, д. 20 </a> </span>
 				</div>
 			</div>
 
@@ -205,24 +210,24 @@
 
 
 
-	<script src="js/libs.min.js"></script>
+
 
 
 
 	<footer class="page-footer">
 
 		<div class="page-footer__wrapper">
-			ы
+
 			<p class="page-footer__logo-wrapper">
 				<img class="page-footer__logo-img  page-footer__logo-img--glasses" src="#" alt="glasses">
 				<img class="page-footer__logo-img  page-footer__logo-img--pink" src="#" alt="pink">
 			</p>
 
 			<p class="page-footer__socials">
-				<span class="social-links">
-<a href="" class="social-link  social-link--tv"> Мы в tviter </a>
-<a href="" class="social-link  social-link--fb"> Мы в facebook </a>
-<a href="" class="social-link  social-link--youtube"> Мы на youtube </a>
+				<span class="page-footer__social-links">
+<a href="" class="page-footer__social-link  social-link--tv"> Мы в tviter </a>
+<a href="" class="page-footer__social-link  social-link--fb"> Мы в facebook </a>
+<a href="" class="page-footer__social-link  social-link--youtube"> Мы на youtube </a>
 		</span>
 			</p>
 
@@ -233,6 +238,8 @@
 		</div>
 
 	</footer>
+
+	<script src="js/libs.min.js"></script>
 
 </body>
 

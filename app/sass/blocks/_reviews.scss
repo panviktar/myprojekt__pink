@@ -1,16 +1,95 @@
+.reviews {
+  @include container;
+  text-align: center;
 
 
+
+  &__author-name {
+    font-weight: $bold;
+    font-style: normal;
+    color: #000;
+  }
+
+  &__author-discription {
+
+    font-family: "Mariad Pro";
+  }
+
+  &__author-quote {
+
+    font-family: "Mariad Pro";
+  }
+}
 
 @media #{$mobile} {
+  .reviews {
+    &__list {
+      padding-top: 50px;
+      padding-bottom: 95px;
+    }
 
-  
+        &__author-name {
+      margin-bottom: 25px;
+    }
+
+    &__author-discription {
+      @include text-hide;
+    }
+
+    &__author-quote {
+      font-size: $fz--xsmall;
+      line-height: 2.1;
+    }
   }
+}
 
 @media #{$tablet} {
+  .reviews {
+    &__list {
+      padding-top: 50px;
+      padding-bottom: 170px;
+      position: relative;
+    }
 
 
+    &__author{
+      position: absolute;
+      bottom: 70px;
+      left: 40%;
+    }
+
+    &__author-name {
+      margin-bottom: 15px;
+      font-size: $fz--medium;
+    }
+
+    &__author-discription {
+      font-size: $fz--xsmall;
+
+    }
+
+    &__author-quote {
+      line-height: 1.7;
+
+    }
   }
-
+}
 @media #{$desktop} {
+  .reviews {
+    &__list {
+      padding-top: 195px;
+      padding-bottom: 170px;
+    }
 
+    &__author-name {
+      margin-bottom: 0;
+      font-size: $fz--xmedium;
+    }
+
+    &__author-quote {
+      padding-left: 80px;
+      padding-right: 80px;
+
+    }
   }
+}
