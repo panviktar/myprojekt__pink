@@ -2,6 +2,7 @@
   width: 300px;
   @include container;
 
+
   &__title {
     display: block;
     text-align: center;
@@ -31,6 +32,10 @@
   .download {
     width: 280px;
     margin: 0 auto;
+    background-image:   url("../../img/intro/iphone-hand-mobile.png");
+    background-position: center 90px;
+    background-repeat: no-repeat;
+
 
     &__title {
       padding-top: 25px;
@@ -56,6 +61,10 @@
 @media #{$tablet} {
 
   .download {
+    background-image:   url("../../img/intro/iphone-hand-tablet@1x.png");
+    background-position: center -20px;
+    background-repeat: no-repeat;
+
 
     &__title {
       padding: 102px 60px 60px 0;
@@ -79,9 +88,13 @@
 
 @media #{$desktop} {
   .download {
+    background-image:   url("../../img/intro/iphone-hand-desktop@1x.png");
+    background-position: center 0px;
+    background-repeat: no-repeat;
     &__title {
+
       width: 300px;
-      padding: 120px 0 0 0;
+      padding-top: 120px;
       @include h2-dekstop;
     }
 

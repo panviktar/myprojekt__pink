@@ -1,12 +1,29 @@
 .visually-hidden {
-  @include text-hide;
+  @include hidden;
 }
 
 .page-header {
-
-  background: $bg--blue;
-  color: #fff;
+  
 }
-@media #{$mobile} {}
-@media #{$tablet} {}
-@media #{$desktop} {}
+@media #{$mobile} {
+  .page-header {
+    background-image: url("../../img/bg/bg-back-mobile.jpg");
+    background-position: center 20px;
+    background-repeat: no-repeat;
+  }
+}
+
+@media #{$tablet} {
+  .page-header {
+    background-image: url("../../img/bg/bg-back-tablet@1x.jpg");
+    background-size: cover;
+    background-position: center 0px;
+  }
+}
+
+@media #{$desktop} {
+  .page-header {
+    background-image: url("../../img/bg/bg-back-desktop.jpg");
+    background-position: center 0px;
+  }
+}
