@@ -16,6 +16,7 @@ $screen--desktop: 1200px;
 $mobile: "(max-width: "$screen--tablet - 1")";
 $tablet: "(min-width: "$screen--tablet")";
 $desktop: "(min-width: "$screen--desktop")";
+$tablet-only: "(max-width: "$screen--desktop - 1")";
 
 
 // padding

@@ -1,66 +1,174 @@
 .page-nav {
-  width: 320px;
-  margin: 0 auto;
+
   @include clearfix;
   background: $bg--dark;
   position: relative;
+  // @include container;
+
+
+  &__wrapper{
+
+  }
 
   &__toggle{
     position: absolute;
     top: 0;
-    right: 0;
+    right: 20px;
     z-index: 2;
-
     display: block;
-    width: 70px;
-    height: 50px;
-
+    width: 50px;
+    min-height: 66px;
     font-size: 0;
     border-color: #000;
     cursor: pointer;
-
     border: none;
-
+    background-color: $bg--dark;
     }
 
   &__logo{
-    float: left;
-    border: 1px solid #fff;
+    width: 80px;
+    height: 25px;
+    padding: 21px 20px;
+
   }
 
   &__list{
-    float: right;
-  }
 
-  &__list{
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
+  &__item {
+    font-weight: $bold;
+    text-align: center;
+  }
+
   &__item a{
+    display: block;
+    padding: 25px 0;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    text-transform: uppercase;
     text-decoration: none;
+    background-color: $bg--blue;
+    border-top: 1px solid #485461;
+    border-bottom: 1px solid #000101;
+  }
+
+  &__item a[href] {
+    &:hover {
+      color: $c--pink;
+    }
+
+    &:active {
+      color: $c--pink-opacity;
+    }
+  }
+
+}
+
+
+.page-nav--closed .page-nav__list {
+  border-top: 1px solid #000101;
+}
+
+.page-nav--closed .page-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background-color: #fff;
+  box-shadow: 0 10px 0 0 #fff,
+              0 20px 0 0 #fff;
+}
+
+.page-nav--closed .page-nav__toggle:hover::before{
+  background-color: $c--pink;
+  box-shadow: 0 10px 0 0 $c--pink,
+              0 20px 0 0 $c--pink;
+}
+
+.page-nav--closed .page-nav__toggle:active::before{
+  background-color: $c--pink-opacity;
+  box-shadow: 0 10px 0 0 $c--pink-opacity,
+              0 20px 0 0 $c--pink-opacity;
+}
+
+.page-nav--opened .page-nav__toggle {
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 18px;
+    width: 36px;
+    height: 4px;
+    background-color: #fff;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: $c--pink
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: $c--pink-opacity;
   }
 
 }
 
 @media #{$mobile} {
+
+  .page-nav--closed .page-nav__item {
+    display: none;
+  }
+
   .page-nav{
-    width: 320px;
-    margin: 0 auto;
+    width: auto;
+    margin: 0;
+  }
+
+  .page-nav{
+    width: auto;
+    margin: 0;
+
+    &__wrapper{
+
+    }
     &__logo{
       width: 80px;
     }
   }
 }
 
-@media #{$tablet} {
+@media #{$tablet-only} {
+  .page-nav--closed .page-nav__item {
+    display: none;
+  }
+
+
+
   .page-nav{
     width: auto;
     margin: 0;
 
     &__wrapper{
-      @include container;
+
     }
     &__logo{
       width: 150px;
@@ -73,9 +181,10 @@
     width: auto;
     margin: 0;
 
-    &__wrapper{
-      @include container;
+    &__toggle {
+      display: none;
     }
+
     &__logo{
       width: 150px;
     }
