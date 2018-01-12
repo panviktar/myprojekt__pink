@@ -23,13 +23,14 @@
     border-color: #000;
     cursor: pointer;
     border: none;
-    background-color: $bg--dark;
+    background-color: inherit;
     }
 
   &__logo{
     width: 80px;
     height: 25px;
     padding: 21px 20px;
+    border: 1px solid #000;
   }
 
 
@@ -67,7 +68,6 @@
       color: $c--pink-opacity;
     }
   }
-
 }
 
 .page-nav--closed .page-nav__toggle::before {
@@ -82,16 +82,20 @@
               0 20px 0 0 #fff;
 }
 
-.page-nav--closed .page-nav__toggle:hover::before{
+.page-nav--closed .page-nav__toggle:hover::before {
   background-color: $c--pink;
   box-shadow: 0 10px 0 0 $c--pink,
               0 20px 0 0 $c--pink;
 }
 
-.page-nav--closed .page-nav__toggle:active::before{
+.page-nav--closed .page-nav__toggle:active::before {
   background-color: $c--pink-opacity;
   box-shadow: 0 10px 0 0 $c--pink-opacity,
               0 20px 0 0 $c--pink-opacity;
+}
+
+.page-nav--opened .page-nav__wrapper {
+  background-color: $bg--blue;
 }
 
 .page-nav--opened .page-nav__list {
@@ -154,55 +158,51 @@
   background-color: $bg--dark;
 }
 
-@media #{$mobile} {
-
-  .page-nav--closed .page-nav__item {
-    display: none;
-  }
-
-  .page-nav{
-    width: auto;
-    margin: 0;
-  }
-
-  .page-nav{
-    width: auto;
-    margin: 0;
-
-    &__wrapper{
-
-    }
-    &__logo{
-      width: 80px;
-    }
-  }
+.page-nav--closed .page-nav__item {
+  display: none;
 }
 
-// @media #{$tablet-only} {
-//   .page-nav--closed .page-nav__item {
-//     display: none;
-//     // &--active {
-//     //   display: block;
-//     // }
-//   }
+@media #{$tablet} {
 
+  .page-nav {
+      min-height: 110px;
 
-
-  .page-nav{
-    width: auto;
-    margin: 0;
-
-    &__wrapper{
-
+    &__toggle{
+      position: absolute;
+      top: 0;
+      right: 40px;
+      width: 50px;
+      min-height: 66px;
     }
+
     &__logo{
       width: 150px;
+      height: 45px;
+      padding: 25px 40px 40px 40px;
     }
-}
+  }
+
+  .page-nav--closed .page-nav__toggle::before {
+    top: 40px;
+  }
+
+  .page-nav--opened .page-nav__logo {
+    padding: 25px 40px 40px 40px;
+  }
+
+  .page-nav--opened .page-nav__toggle {
+
+    &::before,
+    &::after {
+      top: 50px;
+    }
+  }
 }
 
+
+
 @media #{$desktop} {
-  .page-nav{
+  .page-nav {
     width: auto;
     margin: 0;
 
@@ -219,5 +219,5 @@
     &__item{
       display: inline-block;
     }
-}
+  }
 }
