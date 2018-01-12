@@ -1,13 +1,14 @@
 .page-nav {
+  min-height: 66px;
 
-  @include clearfix;
-  background: $bg--dark;
-  position: relative;
+
   // @include container;
 
 
   &__wrapper{
-
+    @include clearfix;
+    background: $bg--dark;
+    position: relative;
   }
 
   &__toggle{
@@ -29,8 +30,8 @@
     width: 80px;
     height: 25px;
     padding: 21px 20px;
-
   }
+
 
   &__list{
 
@@ -46,7 +47,7 @@
 
   &__item a{
     display: block;
-    padding: 25px 0;
+    padding: 21px 0;
     font-size: 18px;
     line-height: 24px;
     color: #fff;
@@ -67,11 +68,6 @@
     }
   }
 
-}
-
-
-.page-nav--closed .page-nav__list {
-  border-top: 1px solid #000101;
 }
 
 .page-nav--closed .page-nav__toggle::before {
@@ -96,6 +92,14 @@
   background-color: $c--pink-opacity;
   box-shadow: 0 10px 0 0 $c--pink-opacity,
               0 20px 0 0 $c--pink-opacity;
+}
+
+.page-nav--opened .page-nav__list {
+  border-top: 1px solid #000101;
+}
+
+.page-nav--opened .page-nav__logo {
+  padding: 23px 20px;
 }
 
 .page-nav--opened .page-nav__toggle {
@@ -130,6 +134,24 @@
     background-color: $c--pink-opacity;
   }
 
+}
+
+.page-nav--nojs .page-nav__toogle {
+  display: none;
+}
+
+.page-nav--nojs .page-nav__wrapper {
+  position: static;
+  height: auto;
+}
+
+.page-nav--nojs .page-nav__list {
+  display: block;
+}
+
+.page-nav--nojs .page-nav__item {
+  display: block;
+  background-color: $bg--dark;
 }
 
 @media #{$mobile} {
