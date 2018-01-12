@@ -156,10 +156,13 @@
   }
 }
 
-@media #{$tablet-only} {
-  .page-nav--closed .page-nav__item {
-    display: none;
-  }
+// @media #{$tablet-only} {
+//   .page-nav--closed .page-nav__item {
+//     display: none;
+//     // &--active {
+//     //   display: block;
+//     // }
+//   }
 
 
 
