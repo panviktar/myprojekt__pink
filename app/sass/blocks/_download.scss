@@ -1,6 +1,9 @@
 .download{
-  width: 300px;
-  @include container;
+  width: 280px;
+  margin: 0 auto;
+  background-image:   url("../../img/intro/iphone-hand-mobile.png");
+  background-position: center 90px;
+  background-repeat: no-repeat;
 
 
   &__title {
@@ -30,11 +33,7 @@
 
 @media #{$mobile} {
   .download {
-    width: 280px;
-    margin: 0 auto;
-    background-image:   url("../../img/intro/iphone-hand-mobile.png");
-    background-position: center 90px;
-    background-repeat: no-repeat;
+
 
 
     &__title {
