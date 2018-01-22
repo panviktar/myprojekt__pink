@@ -4,8 +4,8 @@
   width: auto;
 
   &__wrapper{
+    // @include container;
     @include clearfix;
-
     position: relative;
   }
 
@@ -33,7 +33,6 @@
 
 
   &__list{
-
     margin: 0;
     padding: 0;
     list-style: none;
@@ -42,6 +41,7 @@
   &__item {
     font-weight: $bold;
     text-align: center;
+
   }
 
   &__item a{
@@ -215,6 +215,8 @@
 
     &__wrapper {
       @include container;
+      display: flex;
+      justify-content: space-between;
     }
 
     &__toggle {
@@ -222,19 +224,15 @@
     }
 
     &__logo{
-      width: 150px;
-      float: left;
-      margin-right: 185px;
+
     }
 
     &__list{
-
-      width: 610px;
-      float: left;
+      display: flex;
+      flex-wrap: wrap;
     }
 
     &__item {
-      float: left;
       margin-right: 65px;
 
       &:last-child {
