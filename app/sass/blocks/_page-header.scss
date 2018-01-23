@@ -7,6 +7,7 @@
 }
 @media #{$mobile} {
   .page-header {
+    background-color: $bg--dark;
     background-image: url("../../img/bg/bg-back-mobile.jpg");
     background-position: center 0px;
     background-repeat: no-repeat;

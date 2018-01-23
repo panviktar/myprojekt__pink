@@ -5,7 +5,7 @@
   font-size: $fz--xxlarge;
   line-height: 1.2;
   font-weight: $light;
-  color: $c--blue;
+
 }
 
 
@@ -13,14 +13,13 @@
   font-size: $fz--xmedium;
   line-height: 1.2;
   font-weight: $light;
-  color: $c--blue;
+
 }
 
 @mixin h2-tablet {
   font-size: $fz--xlarge;
   line-height: 1.2;
   font-weight: $light;
-  color: $c--blue;
   margin: 0;
   padding: 0;
 }
