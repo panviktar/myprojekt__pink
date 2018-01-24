@@ -21,10 +21,13 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sass-glob": "^1.0.8",
+    "gulp-svgstore": "^6.1.1",
     "gulp-uglifyjs": "^0.6.2",
-    "imagemin-pngquant": "^5.0.1"
+    "imagemin-pngquant": "^5.0.1",
+    "run-sequence": "^2.2.1"
   },
   "dependencies": {
-    "css-mqpacker": "^6.0.1"
+    "css-mqpacker": "^6.0.1",
+    "gulp-svgmin": "^1.2.4"
   }
 }

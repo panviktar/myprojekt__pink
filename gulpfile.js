@@ -1,18 +1,25 @@
 var gulp       = require('gulp'), // Подключаем Gulp
-	sass         = require('gulp-sass'), //Подключаем Sass пакет,
-	browserSync  = require('browser-sync'), // Подключаем Browser Sync
-	concat       = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
-	uglify       = require('gulp-uglifyjs'), // Подключаем gulp-uglifyjs (для сжатия JS)
-	cssnano      = require('gulp-cssnano'), // Подключаем пакет для минификации CSS
-	rename       = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
-	del          = require('del'), // Подключаем библиотеку для удаления файлов и папок
-	imagemin     = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
-	pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
-	cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
-	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
-	sassGlob 		 = require('gulp-sass-glob'); // NOTE: Also support using ' (single quotes) for example: @import 'vars/**/*.scss';
-	plumber = require('gulp-plumber');
-	mqpacker = require("css-mqpacker");
+		sass         = require('gulp-sass'), //Подключаем Sass пакет,
+		browserSync  = require('browser-sync'), // Подключаем Browser Sync
+		concat       = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
+		uglify       = require('gulp-uglifyjs'), // Подключаем gulp-uglifyjs (для сжатия JS)
+		cssnano      = require('gulp-cssnano'), // Подключаем пакет для минификации CSS
+		rename       = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
+		del          = require('del'), // Подключаем библиотеку для удаления файлов и папок
+		imagemin     = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
+		pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
+		cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
+		autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+		sassGlob 		 = require('gulp-sass-glob'); // NOTE: Also support using ' (single quotes) for example: @import 'vars/**/*.scss';
+		plumber 		 = require('gulp-plumber');
+	// После ошибки watch продолжает работать
+		mqpacker 		 = require("css-mqpacker");
+		svgstore 		 = require('gulp-svgstore');
+		// Собирает SVG-спрайт
+		svgmin 			 = require('gulp-svgmin');
+		// Минифицирует svg
+		path 				 = require('path');
+		runSequence  = require('run-sequence');
 
 
 gulp.task('sass', function(){ // Создаем таск Sass
@@ -81,7 +88,23 @@ gulp.task('img', function() {
 		.pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
 });
 
-gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
+gulp.task('symbols', function () {
+    return gulp
+        .src('app/img/svg-sprite/*.svg')
+				// Берем svg-иконки
+        .pipe(svgmin())
+				// Минифиципуем
+				.pipe(svgstore({
+						inlineSvg: true
+	     	}))
+				// Собираем спрайт
+        .pipe(rename('symbols.svg'))
+				// Назначаем имя
+        .pipe(gulp.dest('app/img'));
+				// Выгружаем в продакшен
+});
+
+gulp.task('build', ['clean', 'img', 'symbols', 'sass', 'scripts'], function() {
 
 	var buildCss = gulp.src([ // Переносим библиотеки в продакшен
 		'app/css/main.css',
