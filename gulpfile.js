@@ -11,9 +11,13 @@ var gulp       = require('gulp'), // Подключаем Gulp
 	cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
 	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
 	sassGlob 		 = require('gulp-sass-glob'); // NOTE: Also support using ' (single quotes) for example: @import 'vars/**/*.scss';
+	plumber = require('gulp-plumber');
+	mqpacker = require("css-mqpacker");
+
 
 gulp.task('sass', function(){ // Создаем таск Sass
 	return gulp.src(['app/sass/**/*.sass', 'app/sass/**/*.scss']) // Берем источник
+		.pipe(plumber())
 		.pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
 		.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
 		.pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
@@ -69,6 +73,7 @@ gulp.task('img', function() {
 		.pipe(cache(imagemin({ // С кешированием
 		// .pipe(imagemin({ // Сжимаем изображения без кеширования
 			interlaced: true,
+			optimizationLevel: 3,
 			progressive: true,
 			svgoPlugins: [{removeViewBox: false}],
 			use: [pngquant()]
