@@ -1,55 +1,46 @@
-.download{
+.download {
   width: 280px;
   margin: 0 auto;
   color: #fff;
-
-
 
   &__title {
     display: block;
     text-align: center;
     @include h2-mobile;
     color: #fff;
-    padding-top: 25px;
+    padding: 5px 0 0;
+  }
+
+  &__title br {
+    display: none;
   }
 
   &__btn-wrap {
-    margin-top: 345px;
+    margin-top: 365px;
     margin-bottom: 50px;
-    position: relative;
-  }
-
-  &__phone-img {
-    position: absolute;
-    bottom: 25px;
   }
 
   &__logo {
     margin-bottom: 15px;
     display: flex;
     justify-content: space-between;
-    padding: 0px 35px;
+    padding: 0 35px;
   }
 
   &__links {
     width: 50px;
     height: 60px;
     background: #fff;
-
   }
 
   &__links--apple {
-background: url('../../img/svg-sprite/icon-twitter.svg');
-  background-repeat: no-repeat;
+    background: url("../../img/svg-sprite/icon-twitter.svg");
+    background-repeat: no-repeat;
   }
 
-  &__links--androis {
+  &__links--android {}
 
-  }
-
-  &__links--windows {
-
-  }
+  &__links--windows {}
 
   &__info {
     font-weight: $light;
@@ -60,64 +51,63 @@ background: url('../../img/svg-sprite/icon-twitter.svg');
   }
 }
 
-.btn--download{
+.btn--download {
   font-size: $fz--base;
   font-weight: $bold;
   text-decoration: none;
   color: #fff;
   border: 3px solid #fff;
   border-radius: 30px;
-  padding: 15px 35px;
+  padding: 13px 35px;
   text-align: center;
 
-    &:hover{
-      background: #fff;
-      color: $bg--pink;
-    }
-    &:active {
-      background: #fff;
-      color: $c--pink-opacity;
-    }
+  &:hover {
+    background: #fff;
+    color: $bg--pink;
   }
 
-
+  &:active {
+    background: #fff;
+    color: $c--pink-opacity;
+  }
+}
 @media #{$tablet} {
-
   .download {
-    background-image:   url("../../img/intro/iphone-hand-tablet@1x.png");
-    background-position: center 20px;
-    background-repeat: no-repeat;
+
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 90px 40px 45px 40px;
 
 
     &__title {
-      padding: 102px 60px 60px 0;
       @include h2-tablet;
     }
 
+    &__title br {
+      display: inline-block;
+    }
+
     &__btn-wrap {
-      margin-top: 45px;
-      margin-bottom: 40px;
+      margin-top: 46px;
+      margin-bottom: 60px;
     }
 
     &__logo {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
 
     &__info {
-      padding-bottom: 112px;
+      font-size: $fz--base;
     }
   }
 }
-
 @media #{$desktop} {
   .download {
-    background-image:   url("../../img/intro/iphone-hand-desktop@1x.png");
-    background-position: center 0px;
-    background-repeat: no-repeat;
-    &__title {
+    padding: 100px $offset--desktop 55px;
 
-      width: 300px;
-      padding-top: 120px;
+    &__title {
       @include h2-dekstop;
     }
 
@@ -132,9 +122,6 @@ background: url('../../img/svg-sprite/icon-twitter.svg');
 
     &__info {
       padding-bottom: 125px;
-      }
-  }
-  .btn--download{
-    font-size: $fz--xmedium;
     }
-}
+  }
+  }

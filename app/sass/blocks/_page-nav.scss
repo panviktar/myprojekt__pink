@@ -1,38 +1,36 @@
 .page-nav {
-  min-height: 66px;
-  background-color: $bg--dark;
+  min-height: $h--header-mobile;
+  background-color: $bg--black-opacity;
   width: auto;
+  position: static;
 
-  &__wrapper{
-    // @include container;
-    @include clearfix;
+  &__wrapper {
     position: relative;
   }
 
-  &__toggle{
+  &__toggle {
     position: absolute;
     top: 0;
     right: 20px;
     z-index: 2;
     display: block;
     width: 50px;
-    min-height: 66px;
+    min-height: $h--header-mobile;
     font-size: 0;
-    border-color: #000;
     cursor: pointer;
     border: none;
+    outline: none;
     background-color: inherit;
-    }
+  }
 
-  &__logo{
+  &__logo {
     width: 80px;
     height: 25px;
     padding: 21px 20px;
-    border: 1px solid #000;
   }
 
-
-  &__list{
+  &__list {
+    position: absolute;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -41,10 +39,9 @@
   &__item {
     font-weight: $bold;
     text-align: center;
-
   }
 
-  &__item a{
+  &__item a {
     display: block;
     padding: 21px 0;
     font-size: 18px;
@@ -67,127 +64,113 @@
     }
   }
 }
-
 @media #{$tablet-only} {
-
-
-// гамбургер
-
-
-
-.page-nav--closed .page-nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: 21px;
-  left: 0;
-  width: 50px;
-  height: 4px;
-  background-color: #fff;
-  box-shadow: 0 10px 0 0 #fff,
-              0 20px 0 0 #fff;
-}
-
-.page-nav--closed .page-nav__toggle:hover::before {
-  background-color: $c--pink;
-  box-shadow: 0 10px 0 0 $c--pink,
-              0 20px 0 0 $c--pink;
-}
-
-.page-nav--closed .page-nav__toggle:active::before {
-  background-color: $c--pink-opacity;
-  box-shadow: 0 10px 0 0 $c--pink-opacity,
-              0 20px 0 0 $c--pink-opacity;
-}
-
-.page-nav--opened .page-nav__wrapper {
-  background-color: $bg--blue;
-}
-
-.page-nav--opened .page-nav__list {
-  border-top: 1px solid #000101;
-}
-
-.page-nav--opened .page-nav__logo {
-  padding: 23px 20px;
-}
-
-
-// Закрытие меню крестик
-.page-nav--opened .page-nav__toggle {
-
-  &::before,
-  &::after {
+  // гамбургер
+  .page-nav--closed .page-nav__toggle::before {
     content: "";
     position: absolute;
-    top: 30px;
-    left: 18px;
-    width: 36px;
+    top: 21px;
+    left: 0;
+    width: 50px;
     height: 4px;
     background-color: #fff;
+    box-shadow: 0 10px 0 0 #fff, 0 20px 0 0 #fff;
   }
 
-  &:before {
-    transform: rotate(45deg);
-    box-shadow: none;
+  .page-nav--closed .page-nav__toggle:hover::before {
+    background-color: $c--pink;
+    box-shadow: 0 10px 0 0 $c--pink, 0 20px 0 0 $c--pink;
   }
 
-  &:after {
-    transform: rotate(-45deg);
-  }
-
-  &:hover::before,
-  &:hover::after {
-    background-color: $c--pink
-  }
-
-  &:active::before,
-  &:active::after {
+  .page-nav--closed .page-nav__toggle:active::before {
     background-color: $c--pink-opacity;
+    box-shadow: 0 10px 0 0 $c--pink-opacity, 0 20px 0 0 $c--pink-opacity;
+  }
+
+  .page-nav--opened .page-nav__wrapper {
+    background-color: $bg--blue;
+  }
+
+  .page-nav--opened .page-nav__list {
+    border-top: 1px solid #000101;
+    width: 100%;
+  }
+
+  .page-nav--opened .page-nav__logo {
+    padding: 21px 20px;
+  }
+  // Закрытие меню крестик
+
+  .page-nav--opened .page-nav__toggle {
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 18px;
+      width: 36px;
+      height: 4px;
+      background-color: #fff;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover::after,
+    &:hover::before {
+      background-color: $c--pink;
+    }
+
+    &:active::after,
+    &:active::before {
+      background-color: $c--pink-opacity;
     }
   }
+  // profession degradation, если отключен js
 
+  .page-nav--nojs .page-nav__toogle {
+    display: none;
+  }
 
-// profession degradation, если отключен js
-.page-nav--nojs .page-nav__toogle {
-  display: none;
+  .page-nav--nojs .page-nav__wrapper {
+    position: static;
+    height: auto;
+  }
+
+  .page-nav--nojs .page-nav__list {
+    display: block;
+  }
+
+  .page-nav--nojs .page-nav__item {
+    display: block;
+    background-color: $bg--dark;
+  }
+
+  .page-nav--closed .page-nav__item {
+    display: none;
+  }
 }
-
-.page-nav--nojs .page-nav__wrapper {
-  position: static;
-  height: auto;
-}
-
-.page-nav--nojs .page-nav__list {
-  display: block;
-}
-
-.page-nav--nojs .page-nav__item {
-  display: block;
-  background-color: $bg--dark;
-}
-
-.page-nav--closed .page-nav__item {
-  display: none;
-}
-}
-
 @media #{$tablet} {
-
   .page-nav {
-      min-height: 110px;
+    min-height: $h--header-tablet;
 
-    &__toggle{
-      position: absolute;
-      top: 0;
+    &__toggle {
+
       right: 40px;
       width: 50px;
       min-height: 66px;
     }
 
-    &__logo{
+    &__logo {
       width: 150px;
       height: 45px;
-      padding: 25px 40px 40px 40px;
+      padding: 25px 40px 40px;
     }
   }
 
@@ -196,23 +179,18 @@
   }
 
   .page-nav--opened .page-nav__logo {
-    padding: 25px 40px 40px 40px;
+    padding: 25px 40px 40px;
   }
 
   .page-nav--opened .page-nav__toggle {
-
-    &::before,
-    &::after {
+    &::after,
+    &::before {
       top: 50px;
     }
   }
 }
-
-
-
 @media #{$desktop} {
   .page-nav {
-
     &__wrapper {
       @include container;
       display: flex;
@@ -223,11 +201,10 @@
       display: none;
     }
 
-    &__logo{
+    &__logo {}
 
-    }
-
-    &__list{
+    &__list {
+      position: relative;
       display: flex;
       flex-wrap: wrap;
     }
@@ -241,7 +218,7 @@
     }
 
     &__item a {
-      padding: 45px 0 42px 0;
+      padding: 45px 0 42px;
       font-size: 18px;
       line-height: 18px;
       font-weight: $normal;
@@ -249,7 +226,6 @@
       border: none;
       text-transform: none;
       position: relative;
-
     }
 
     &__item a[href] {
@@ -258,13 +234,13 @@
       }
 
       &:hover::before {
-     display: block;
-     position: absolute;
-     content: "";
-     height: 2px;
-     width: 100%;
-     background-color: #fff;
-     bottom: 30px;
+        display: block;
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        bottom: 30px;
       }
 
       &:active {
@@ -275,6 +251,5 @@
         display: none;
       }
     }
-    }
-
+  }
 }

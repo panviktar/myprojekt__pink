@@ -1,5 +1,11 @@
 @import "_variables";
 
+@mixin retina {
+  min-resolution: 144dpi;
+  min-resolution: 1.5dppx;
+
+}
+
 
 @mixin h1 {
   font-size: $fz--xxlarge;
@@ -28,7 +34,6 @@
   font-size: $fz--xxlarge;
   line-height: 1.2;
   font-weight: $light;
-  color: $c--blue;
   margin: 0;
   padding: 0;
 }

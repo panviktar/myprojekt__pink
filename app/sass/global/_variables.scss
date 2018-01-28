@@ -18,11 +18,17 @@ $tablet: "(min-width: "$screen--tablet")";
 $desktop: "(min-width: "$screen--desktop")";
 $tablet-only: "(max-width: "$screen--desktop - 1")";
 
+$retina2x: "(min-resolution: 1.5dppx)";
 
 // padding
-$offset--mobile: 20px;
-$offset--tablet: 40px;
-$offset--desktop: 40px;
+$offset--mobile: 0 20px;
+$offset--tablet: 0 40px;
+$offset--desktop: 0 40px;
+
+// Высота шапки
+$h--header-mobile: 66px;
+$h--header-tablet: 110px;
+$h--header-desktop: 110px;
 
 // Цвет фона
 $bg--gray: #f2f2f2;
@@ -34,6 +40,7 @@ $bg--dark: #1d2631;
 $bg--green: #2aab6d;
 $bg--green-darker: #1c9b5e;
 $bg--blue-opacity-light: rgba(40, 54, 69, 0.1);
+
 $bg--blue-opacity: rgba(40, 54, 69, 0.3);
 $bg--blue-opacity-darker: rgba(40, 54, 69, 0.5);
 $bg--blue-opacity-dark: rgba(40, 54, 69, 0.6);
