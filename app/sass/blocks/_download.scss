@@ -35,10 +35,12 @@
     width: 50px;
     height: 60px;
     background: #fff;
+
   }
 
   &__links--apple {
-
+background: url('../../img/svg-sprite/icon-twitter.svg');
+  background-repeat: no-repeat;
   }
 
   &__links--androis {
