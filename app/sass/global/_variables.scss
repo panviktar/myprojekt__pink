@@ -31,6 +31,8 @@ $h--header-tablet: 110px;
 $h--header-desktop: 110px;
 
 // Цвет фона
+$bg--white: #fff;
+$bg--black: #000;
 $bg--gray: #f2f2f2;
 $bg--gray-light: #e5e5e5;
 $bg--gray-darker: #dddfe0;
@@ -40,7 +42,6 @@ $bg--dark: #1d2631;
 $bg--green: #2aab6d;
 $bg--green-darker: #1c9b5e;
 $bg--blue-opacity-light: rgba(40, 54, 69, 0.1);
-
 $bg--blue-opacity: rgba(40, 54, 69, 0.3);
 $bg--blue-opacity-darker: rgba(40, 54, 69, 0.5);
 $bg--blue-opacity-dark: rgba(40, 54, 69, 0.6);
@@ -51,6 +52,8 @@ $bg--black-opacity-light: rgba(0, 0, 0, 0.1);
 $bg--black-opacity-dark: rgba(0, 0, 0, 0.5);
 
 // Цвет текста
+$c--white: $bg--white;
+$c--black: $bg--black;
 $c--pink: $bg--pink;
 $c--blue: $bg--blue;
 $c--white-opacity: rgba(255, 255, 255, 0.3);

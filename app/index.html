@@ -24,31 +24,22 @@
 
 		<h1 class="visually-hidden"> Pink - лучший фоторедактор с яркими фильтрами </h1>
 
-		<nav class="page-nav  page-nav--closed  page-nav--nojs">
-			<div class="page-nav__wrapper">
-				<div class="page-nav__logo">
+		<nav class="main-nav  main-nav--closed  main-nav--nojs">
+			<div class="main-nav__wrapper">
+				<div class="main-nav__logo">
 					<a href="#">
 					<img src="#" alt="Pink" width="80px" height="25px">
 				</a>
 
 				</div>
 
-				<button class="page-nav__toggle" type="button"> Открыть меню </button>
+				<button class="main-nav__toggle" type="button"> Открыть меню </button>
 
-				<ul class="page-nav__list">
-					<li class="page-nav__item">
-						<a href="#"> Информация </a>
-					</li>
-					<li class="page-nav__item">
-						<a href="#"> Возможности</a>
-					</li>
-					<li class="page-nav__item">
-						<a href="#"> Отзывы
-							</a>
-					</li>
-					<li class="page-nav__item"> <a href="#"> Стоимость
-							</a>
-					</li>
+				<ul class="main-nav__list">
+					<li class="main-nav__item  main-nav__item--active"><a>Главная</a></li>
+            <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+            <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+            <li class="main-nav__item"><a href="http://www.htmlacademy.ru" target="_blank">HTML Academy</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -63,9 +54,9 @@
 				<a href="#" class="btn  btn--download"> Скачать приложение </a>
 			</div>
 			<div class="download__logo">
-				<a href="" class="download__links  download__links--apple"> </a>
-				<a href="" class="download__links  download__links--android"> </a>
-				<a href="" class="download__links  download__links--windows"> </a>
+				<a class="download__links  download__links--apple" href="https://itunes.apple.com" target="_blank" title="Скачать для iPhone и iPad"> IOS </a>
+				<a class="download__links  download__links--android" href="https://play.google.com" target="_blank" title="Скачать для Android"> Android </a>
+				<a class="download__links  download__links--windows" href="https://www.microsoft.com/store/" target="_blank" title="Скачать для Windows Phone"> Windows </a>
 			</div>
 			<div class="download__info">
 				<p> Доступно для iPhone, iPad, Android, <br> Windows phone, Mac OS, Windows 8 </p>
@@ -241,7 +232,7 @@
 	</footer>
 
 
-	<script src="js/blocks/page-nav.js"></script>
+	<script src="js/blocks/main-nav.js"></script>
 
 </body>
 
