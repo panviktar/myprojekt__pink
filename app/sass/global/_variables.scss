@@ -18,8 +18,8 @@ $tablet: "(min-width: "$screen--tablet")";
 $desktop: "(min-width: "$screen--desktop")";
 $tablet-only: "(max-width: "$screen--desktop - 1")";
 
-$retina2x: "(min-resolution: 1.5dppx)";
-
+$retina-dppx: 1.5dppx;
+$retina-dpi: 144dpi;
 // padding
 $offset--mobile: 0 20px;
 $offset--tablet: 0 40px;

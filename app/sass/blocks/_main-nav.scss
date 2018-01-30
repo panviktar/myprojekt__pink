@@ -1,6 +1,6 @@
 .main-nav {
   min-height: $h--header-mobile;
-  background-color: $bg--black-opacity;
+  background-color: $bg--blue-opacity-light;
   width: auto;
   position: static;
 
@@ -31,6 +31,8 @@
 
   &__list {
     position: absolute;
+    display: block;
+    text-align: center;
     margin: 0;
     padding: 0;
     list-style: none;
