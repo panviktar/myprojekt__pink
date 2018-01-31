@@ -36,6 +36,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
   }
 
   &__item {
@@ -45,6 +46,7 @@
 
   &__item a {
     display: block;
+
     padding: 21px 0;
     font-size: 18px;
     line-height: 24px;
@@ -223,7 +225,7 @@
       flex-direction: row;
       border-top: none;
       justify-content: flex-end;
-      margin-right: 60px;
+      margin-right: 180px;
     }
 
     &__item {

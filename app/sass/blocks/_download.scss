@@ -1,36 +1,96 @@
 .download {
-  width: 280px;
-  margin: 0 auto;
-  color: #fff;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  background-color: $bg--dark;
+  text-align: center;
+
+  @media #{$tablet} {
+    width: 300px;
+    padding-top: 140px;
+    padding-bottom: 80px;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media #{$desktop} {
+    padding-top: 180px;
+    padding-bottom: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &__wrapper {
+    @media #{$mobile} {
+      @include container;
+    }
+  }
 
   &__title {
-    display: block;
-    text-align: center;
-    @include h2-mobile;
-    color: #fff;
-    padding: 5px 0 0;
+    @media #{$mobile} {
+      @include hidden;
+
+    }
+
+    @media #{$tablet} {
+      @include h2-tablet;
+      margin-top: 0;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 5;
+    }
+
+    @media #{$desktop} {
+      @include h2-desktop;
+      margin-top: 0;
+      margin-bottom: 70px;
+    }
   }
 
   &__title br {
     display: none;
+
+    @media #{$tablet} {
+      display: inline-block;
+    }
   }
 
   &__btn-wrap {
-    margin-top: 365px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 45px;
+
+    @media #{$tablet} {
+      margin-top: 0;
+      margin-bottom: 60px;
+    }
+    @media #{$desktop} {
+      margin-bottom: 75px;
+    }
   }
 
   &__logo {
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 35px;
+    margin-bottom: 25px;
+
+    @media #{$tablet} {
+      margin-bottom: 35px;
+    }
+
+    @media #{$desktop} {
+      margin-bottom: 55px;
+    }
   }
 
   &__links {
-    width: 50px;
-    height: 60px;
-    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    width: 47px;
+    height: 56px;
+    background-color: $bg--pink;
+    margin-right: 16px;
+    margin-left: 16px;
+
   }
 
   &__links--apple {
@@ -44,10 +104,13 @@
 
   &__info {
     font-weight: $light;
-    padding-bottom: 33px;
     font-size: $fz--xsmall;
     line-height: 1.8;
-    text-align: center;
+
+
+    @media #{$tablet} {
+      font-size: $fz--base;
+    }
   }
 }
 
@@ -71,57 +134,3 @@
     color: $c--pink-opacity;
   }
 }
-@media #{$tablet} {
-  .download {
-
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 90px 40px 45px 40px;
-
-
-    &__title {
-      @include h2-tablet;
-    }
-
-    &__title br {
-      display: inline-block;
-    }
-
-    &__btn-wrap {
-      margin-top: 46px;
-      margin-bottom: 60px;
-    }
-
-    &__logo {
-      margin-bottom: 20px;
-    }
-
-    &__info {
-      font-size: $fz--base;
-    }
-  }
-}
-@media #{$desktop} {
-  .download {
-    padding: 100px $offset--desktop 55px;
-
-    &__title {
-      @include h2-dekstop;
-    }
-
-    &__btn-wrap {
-      margin-top: 55px;
-      margin-bottom: 65px;
-    }
-
-    &__logo {
-      margin-bottom: 55px;
-    }
-
-    &__info {
-      padding-bottom: 125px;
-    }
-  }
-  }

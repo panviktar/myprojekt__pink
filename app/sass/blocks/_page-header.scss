@@ -14,14 +14,9 @@
   }
 
   &--full {
-    position: relative;
-    background-color: $bg--dark;
-
-     @media #{$desktop} {
-      position: absolute;
-      background-color: $bg--black-opacity;
+    position: absolute;
+    background-color: $c--black-opacity;
     }
-  }
 }
 
 .page-header__wrapper {
