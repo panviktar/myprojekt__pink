@@ -7,7 +7,7 @@
   background-color: $bg--black-opacity;
   color: $c--white;
   width: 100%;
-  z-index: 2;
+  z-index: 99;
 
   @media #{$tablet} {
     min-height: 110px;
@@ -21,7 +21,7 @@
 
 .page-header__wrapper {
   width: 100%;
-
+  
    @media #{$desktop} {
     width: 940px;
     margin-left: auto;

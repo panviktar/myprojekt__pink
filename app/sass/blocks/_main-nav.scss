@@ -8,6 +8,11 @@
     position: relative;
   }
 
+  &__wrapper a {
+    border: none;
+    outline: none;
+  }
+
   &__toggle {
     position: absolute;
     top: 0;
@@ -23,12 +28,6 @@
     background-color: inherit;
   }
 
-  &__logo {
-    width: 80px;
-    height: 25px;
-    padding: 21px 20px;
-  }
-
   &__list {
     position: absolute;
     display: block;
@@ -36,7 +35,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-
+    z-index: 25;
   }
 
   &__item {
@@ -46,7 +45,6 @@
 
   &__item a {
     display: block;
-
     padding: 21px 0;
     font-size: 18px;
     line-height: 24px;
@@ -58,6 +56,7 @@
     // border-bottom: 1px solid #000101;
     box-shadow: 0 -1px 0 $c--black,
             inset 0 1px 0 rgba($c--white, 0.15);
+
   }
 
   &__item:last-child a {
@@ -108,12 +107,15 @@
     width: 100%;
   }
 
-  .main-nav--opened .main-nav__logo {
-    padding: 21px 20px;
+  .main-nav--closed .main-nav__toggle {
+    border: none;
+    outline: none;
   }
   // Закрытие меню крестик
 
   .main-nav--opened .main-nav__toggle {
+    border: none;
+    outline: none;
     &::after,
     &::before {
       content: "";
@@ -172,25 +174,16 @@
   .main-nav {
     min-height: $h--header-tablet;
 
+
     &__toggle {
       right: 40px;
       width: 50px;
       min-height: 66px;
     }
-
-    &__logo {
-      width: 150px;
-      height: 45px;
-      padding: 25px 40px 40px;
-    }
   }
 
   .main-nav--closed .main-nav__toggle::before {
     top: 40px;
-  }
-
-  .main-nav--opened .main-nav__logo {
-    padding: 25px 40px 40px;
   }
 
   .main-nav--opened .main-nav__toggle {
@@ -215,8 +208,6 @@
     &__toggle {
       display: none;
     }
-
-    &__logo {}
 
     &__list {
       position: relative;
@@ -274,5 +265,85 @@
         display: none;
       }
     }
+  }
+}
+
+.logo {
+  &__svg {
+  padding: 20px 20px 0 20px;
+  }
+  &__letter--tablet-desktop {
+    display: none;
+  }
+
+  &__letter--mobile {
+    display: block;
+  }
+
+  &__star {
+    display: none;
+  }
+
+  &__glasses {
+    display: none;
+    }
+  }
+
+
+
+@media #{$tablet} {
+  .logo {
+    &__svg {
+    padding: 20px 40px 40px 40px;
+    }
+    &__letter--mobile {
+    display: none;
+    }
+    &__letter--tablet-desktop {
+    display: block;
+    }
+    &__star {
+    display: none;
+    }
+    &__glasses--tablet {
+    display: inline-block;
+    }
+  }
+
+  .logo__svg:hover  .logo__glasses--tablet {
+    fill: $c--pink;
+  }
+
+  .logo__svg:active  .logo__letter--tablet-desktop,
+  .logo__svg:active  .logo__glasses--tablet {
+    fill: $bg--white-opacity;
+  }
+
+}
+
+@media #{$desktop} {
+  .logo {
+  &__svg {
+    padding: 25px 40px 35px 40px;
+    margin-left: -120px;
+  }
+  &__glasses--tablet {
+    display: none;
+  }
+  &__glasses--desktop {
+    display: block;
+  }
+  &__star {
+  display: block;
+    }
+  }
+
+  .logo__svg:hover .logo__glasses--desktop {
+    fill: $c--pink;
+  }
+
+  .logo__svg:active  .logo__glasses--desktop,
+  .logo__svg:active  .logo__star {
+    fill: $bg--white-opacity;
   }
 }

@@ -18,8 +18,10 @@ $tablet: "(min-width: "$screen--tablet")";
 $desktop: "(min-width: "$screen--desktop")";
 $tablet-only: "(max-width: "$screen--desktop - 1")";
 
+// Ретина картинок
 $retina-dppx: 1.5dppx;
 $retina-dpi: 144dpi;
+
 // padding
 $offset--mobile: 0 20px;
 $offset--tablet: 0 40px;
@@ -64,7 +66,6 @@ $c--pink-opacity: rgba(210, 40, 86, 0.3);
 
 
 // Шрифты
-
 $font-family: "Open Sans", Arial, sans-serif;
 
 // Размер шрифта
