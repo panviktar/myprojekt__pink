@@ -3,6 +3,7 @@
     &__title{
       text-align: center;
       @include h2-mobile;
+
     }
 
     &__title-wrapper {
@@ -21,14 +22,39 @@
     }
 
     &__info {
-      padding: 90px 0 320px 0;
+      padding-top: 90px;
+      padding-bottom: 320px;
       text-align: center;
       background-color: $bg--gray;
       position: relative;
       z-index: 3;
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 31px;
+        background: $bg--gray url(../img/bg/bg-triangle-white.svg) no-repeat center top;
+        background-size: 100% 31px;
+      }
+    }
+
+    &__info-wrapper{
+      @include container;
+    }
+
+
+    &__info-list {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
     }
 
     &__item {
+      padding: 0 20px;
       margin-bottom: 40px;
     }
 
@@ -44,7 +70,6 @@
 
 @media #{$tablet} {
   .promo{
-    text-align: left;
 
     &__title{
       @include h2-tablet;
@@ -55,17 +80,38 @@
       }
 
     &__title--bottom{
-      padding: 0 140px 40px 140px;
+      padding: 0;
+    }
 
-      }
+    &__title--top br {
+      display: none;
+    }
 
     &__info{
-      padding-left: 350px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 51px;
+        background: $bg--gray url(../img/bg/bg-triangle-white.svg) no-repeat center top;
+        background-size: 100% 51px;
+      }
     }
+
+    &__info-list {
+    padding-left: 50%;
+    margin-bottom: 45px;
+    text-align: left;
+    padding-right: 0;
+  }
 
     &__item{
       margin-bottom: 45px;
-      width: 310px;
+
     }
 
     &__item-title{
@@ -96,9 +142,24 @@
       }
 
       &__info{
-        @include container;
+        width: 100%;
         padding-bottom: 70px;
         padding-top: 355px;
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: 0;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 74px;
+          background: $bg--gray url(../img/bg/bg-triangle-white.svg) no-repeat center top;
+          background-size: 100% 74px;
+        }
+      }
+
+      &__info-list {
+
       }
 
       &__item{

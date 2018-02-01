@@ -42,14 +42,15 @@
 .intro__inner {
   @include container;
   position: relative;
-
-  @media #{$tablet} {
-    height: 100%;
-  }
 }
 
 .intro__inner--index {
-  @media #{$tablet-only} {
+
+  @media #{$mobile} {
+      width: auto;
+      padding: 0;
+    }
+  @media #{$tablet} {
       min-height: 619px;
     }
 

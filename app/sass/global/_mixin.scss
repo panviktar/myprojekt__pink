@@ -74,7 +74,7 @@
 
 
   @media #{$tablet} {
-    min-width: $screen--tablet;
+    width: $screen--tablet;
     padding-left: $offset--tablet;
     padding-right: $offset--tablet;
   }
