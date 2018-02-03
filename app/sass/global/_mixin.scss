@@ -42,7 +42,8 @@
   font-size: $fz--base;
   line-height: 1.2;
   font-weight: $bold;
-  color: #000;
+  font-style: normal;
+  color: $c--black;
   margin: 0;
   padding: 0;
 }
@@ -51,7 +52,7 @@
   font-size: $fz--base;
   line-height: 1.2;
   font-weight: $bold;
-  color: #000;
+  color: $c--black;
   margin: 0;
   padding: 0;
 }
@@ -60,7 +61,7 @@
   font-size: $fz--large;
   line-height: 1.2;
   font-weight: $bold;
-  color: #000;
+  color: $c--black;
   margin: 0;
   padding: 0;
 }
