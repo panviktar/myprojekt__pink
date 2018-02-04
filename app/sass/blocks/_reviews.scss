@@ -2,6 +2,10 @@
   .reviews {
     position: relative;
 
+    &__navigation {
+      display: none;
+    }
+
       @media #{$desktop} {
 
     &::before {
@@ -14,7 +18,8 @@
       background-image: url("../img/bg/quotes.svg");
       background-repeat: no-repeat;
       background-position: center;
-}
+    }
+
     &__navigation {
       position: absolute;
       display: block;
@@ -122,26 +127,24 @@
         }
     }
 
-    &__paginator {
-      width: 65px;
-      height: 15px;
-      margin-bottom: 40px;
-      margin-right: auto;
-      margin-left: auto;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      @media #{$tablet} {
-        margin-bottom: 15px;
-      }
 
-      @media #{$desktop} {
-        display: none;
-      }
-    }
   }
 
   .paginator {
+    &__list {
+    width: 65px;
+    height: 15px;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @media #{$desktop} {
+      display: none;
+    }
+  }
+
     &__item {
     width:6px;
     height: 6px;
@@ -162,5 +165,11 @@
         background: $bg--white;
       }
     }
+  }
+}
+
+.paginator-off {
+  @media #{$tablet} {
+    display: none;
   }
 }

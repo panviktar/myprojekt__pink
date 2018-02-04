@@ -1,120 +1,132 @@
 .contacts {
 
-  text-align: center;
-
-  &__columns{
+  &__wrapper{
     @include container;
+    padding-top: 35px;
+    padding-bottom: 40px;
+    text-align: center;
+
+    @media #{$tablet} {
+      padding-top: 50px;
+      padding-bottom: 0;
+    }
+
+    @media #{$desktop} {
+      padding-top: 65px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__title {
+    @include h2-mobile;
+    margin-bottom: 20px;
+
+    @media #{$tablet} {
+      @include h2-tablet;
+      margin-bottom: 20px;
+    }
+
+    @media #{$desktop} {
+      @include h2-desktop;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+
+      @media #{$tablet} {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+    }
+
+  &__item {
+    padding: 14px 0;
+
+      @media #{$tablet} {
+        padding: 25px 0 15px 0;
+        width: 310px;
+      }
+
+      @media #{$desktop} {
+        width: 313px;
+        padding-bottom: 0;
+      }
+
+    &--phone {
+      @media #{$desktop} {
+        order: 1;
+      }
+    }
+
+    &--mail {
+      @media #{$desktop} {
+        order: 3;
+      }
+    }
+
+    &--adres {
+      @media #{$desktop} {
+        order: 2;
+      }
+    }
+  }
+
+  &__info {
+    display: block;
+    margin-top: 8px;
+
+    @media #{$desktop} {
+      margin-top: 20px;
+    }
   }
 
   &__info a {
     @include link;
     font-weight: $light;
-    margin-top: 5px;
-    display: block;
-  }
-  &__map{
-background: #e1e1e1;
-  }
-}
-@media #{$mobile} {
-  .contacts {
-    padding-top: 45px;
-    padding-bottom: 35px;
-
-    &__title {
-      @include h2-mobile;
-      padding-bottom: 35px;
-    }
-
-    &__info {
-      display: block;
-      margin-bottom: 20px;
-    }
-
-    &__info a {
-      font-size: $fz--xmedium;
-    }
-    &__map{
-    min-height: 200px;
-    }
-
-  }
-}
-
-@media #{$tablet} {
-  .contacts{
-    padding-top: 50px;
-    padding-bottom: 25px;
-
-  &__title {
-    @include h2-tablet;
-    padding-bottom: 45px;
-  }
-
-  &__mail,
-  &__phone{
-  display: inline-block;
-  width: 190px;
-  vertical-align: top;
-}
-
-  &__phone{
-    margin-right: 120px;
-  }
-
-  &__info {
-    display: block;
-    margin-bottom: 20px;
-  }
-
-  &__adres{
-    margin-top: 40px;
-  }
-
-  &__info a {
     font-size: $fz--xmedium;
   }
-  &__map{
-min-height: 380px;
-  }
-}
-}
-@media #{$desktop} {
-  .contacts{
-    padding-top: 75px;
 
-  &__title {
-    @include h2-desktop;
-    padding-bottom: 55px;
-  }
-
-  &__mail,
-  &__phone  {
-  display: inline-block;
-  width: 300px;
-  vertical-align: top;
-  }
-
-  &__phone{
-    margin-right: 340px;
-  }
-
-  &__adres{
-    margin-top: -95px;
-  }
-
-  &__info {
-    display: block;
-    margin-bottom: 20px;
-    margin-top: 25px;
-  }
-
-  &__info a {
-    font-size: $fz--xmedium;
+  &__map-wrapper {
 
   }
-  &__map{
-min-height: 525px;
+
+  &__map {
+    position: relative;
+    font-size: 0;
+    background-image: url("../img/bg/map-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 200px;
+    width: 100%;
+    height: 200px;
+
+      @media #{$tablet} {
+        background-image: url("../img/bg/map-tablet-desktop.jpg");
+        background-size: 100% 380px;
+        height: 380px;
+      }
+
+      @media #{$desktop} {
+        height: 505px;
+        background-size: 100% 505px;
+      }
+
+    &::before {
+      @include triangle-footer;
+
+      @media #{$tablet} {
+        height: 75px;
+        background-size: 100% 75px;
+      }
+
+      @media #{$desktop} {
+        height: 107px;
+        background-size: 100% 107px;
+      }
+    }
   }
-}
 }
