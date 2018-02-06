@@ -86,13 +86,22 @@
 
   &__info a {
     @include link;
+    text-decoration: none;
     font-weight: $light;
     font-size: $fz--xmedium;
-  }
 
-  &__map-wrapper {
+    &:hover::after {
+        display: block;
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: $bg--pink;
+        bottom: 15px;
+      }
+    }
 
-  }
+
 
   &__map {
     position: relative;

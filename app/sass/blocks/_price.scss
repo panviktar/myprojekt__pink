@@ -9,8 +9,7 @@
     padding-top: 90px;
     padding-bottom: 5px;
     @include container;
-    padding-left: 20px;
-    padding-right: 20px;
+
 
     @media #{$tablet} {
       padding-bottom: 70px;
@@ -36,7 +35,7 @@
       }
 
     @media #{$desktop} {
-    max-width: 940px;
+    max-width: 1020px;
     }
   }
 
@@ -61,7 +60,7 @@
       }
       @media #{$desktop} {
       padding: 23px 0 15px 0;
-      width: 231px;
+      width: 285px;
       }
   }
 

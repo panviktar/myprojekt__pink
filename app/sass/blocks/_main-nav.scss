@@ -174,7 +174,6 @@
   .main-nav {
     min-height: $h--header-tablet;
 
-
     &__toggle {
       right: 40px;
       width: 50px;
@@ -227,15 +226,24 @@
       }
     }
 
-    &__item--active a{
+    &__item--active a:hover {
+      color: $c--pink;
       &::after {
         display: block;
         position: absolute;
         content: "";
         height: 2px;
         width: 100%;
-        background-color: #fff;
+        background-color: $bg--pink;
         bottom: 30px;
+      }
+    }
+
+    &__item--active a:active {
+      color: $c--white-opacity;
+      &::after {
+        display: none;
+
       }
     }
 
@@ -282,7 +290,7 @@
 
 .logo {
   &__svg {
-  padding: 20px 20px 0 20px;
+  padding: 21px 20px 0 20px;
   }
   &__letter--tablet-desktop {
     display: none;
@@ -322,16 +330,7 @@
     }
   }
 
-  .logo__svg:hover  .logo__glasses--tablet {
-    fill: $c--pink;
   }
-
-  .logo__svg:active  .logo__letter--tablet-desktop,
-  .logo__svg:active  .logo__glasses--tablet {
-    fill: $bg--white-opacity;
-  }
-
-}
 
 @media #{$desktop} {
   .logo {
@@ -349,13 +348,15 @@
   display: block;
     }
   }
+}
 
-  .logo__svg:hover .logo__glasses--desktop {
-    fill: $c--pink;
-  }
+.logo__svg:hover  .logo__glasses,
+.logo__svg:hover  .logo__letter, {
+  fill: $c--pink;
+}
 
-  .logo__svg:active  .logo__glasses--desktop,
-  .logo__svg:active  .logo__star {
-    fill: $bg--white-opacity;
-  }
+.logo__svg:active  .logo__letter,
+.logo__svg:active  .logo__glasses,
+.logo__svg:active  .logo__star {
+  fill: $bg--white-opacity;
 }
