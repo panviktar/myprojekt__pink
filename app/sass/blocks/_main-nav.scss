@@ -227,6 +227,18 @@
       }
     }
 
+    &__item--active a{
+      &::after {
+        display: block;
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        bottom: 30px;
+      }
+    }
+
     &__item a {
       padding: 45px 0 42px;
       font-size: 18px;

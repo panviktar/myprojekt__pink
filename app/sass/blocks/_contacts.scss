@@ -100,14 +100,12 @@
     background-image: url("../img/bg/map-mobile.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% 200px;
-    width: 100%;
     height: 200px;
 
       @media #{$tablet} {
         background-image: url("../img/bg/map-tablet-desktop.jpg");
-        background-size: 100% 380px;
         height: 380px;
+        background-size: 100% 380px;
       }
 
       @media #{$desktop} {
