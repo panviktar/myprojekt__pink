@@ -31,7 +31,6 @@
   &__title {
     @media #{$mobile} {
       @include hidden;
-
     }
 
     @media #{$tablet} {

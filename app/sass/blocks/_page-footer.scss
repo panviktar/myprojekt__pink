@@ -20,11 +20,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: auto;
     padding-right: 40px;
     padding-left: 40px;
+    @include container;
+    width: 320px;
+
+      @media #{$tablet} {
+        width: 700px;
+      }
 
       @media #{$desktop} {
+        width: 1120px;
         padding-top: 75px;
         padding-bottom: 72px;
       }

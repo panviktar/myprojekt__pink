@@ -6,6 +6,16 @@
 
   &__wrapper {
     position: relative;
+    @include container;
+    width: 320px;
+
+      @media #{$tablet} {
+        width: 700px;
+      }
+
+      @media #{$desktop} {
+        width: 1120px;
+      }
   }
 
   &__wrapper a {
