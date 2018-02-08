@@ -1,11 +1,18 @@
 .main-nav {
   min-height: $h--header-mobile;
   background-color: $bg--blue-opacity-light;
-  width: auto;
   position: static;
 
   &__wrapper {
     position: relative;
+    @include container;
+    max-width: 320px;
+    @media #{$tablet} {
+      max-width: 700px;
+    }
+    @media #{$desktop} {
+      max-width: 700px;
+    }
   }
 
   &__wrapper a {
