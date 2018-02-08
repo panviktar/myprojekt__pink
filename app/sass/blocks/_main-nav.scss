@@ -6,13 +6,15 @@
   &__wrapper {
     position: relative;
     @include container;
-    max-width: 320px;
-    @media #{$tablet} {
-      max-width: 700px;
-    }
-    @media #{$desktop} {
-      max-width: 700px;
-    }
+    width: 320px;
+
+      @media #{$tablet} {
+        width: 700px;
+      }
+
+      @media #{$desktop} {
+        width: 1120px;
+      }
   }
 
   &__wrapper a {

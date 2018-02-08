@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-position: center top;
   color: $c--white;
-  padding-top: 66px;
+  // padding-top: 399px;
 
   @media (min-resolution: $retina-dpi),
         (min-resolution: $retina-dppx) {
@@ -39,6 +39,7 @@
   }
 }
 
+
 .intro__inner {
   @include container;
   position: relative;
@@ -58,6 +59,41 @@
       min-height: 743px;
     }
   }
+
+  .intro__inner--photo {
+    width: 320px;
+    @include container;
+    padding: 0;
+    padding-top: 80px;
+    min-height: 160px;
+    text-align: center;
+
+    @media #{$tablet} {
+      padding-top: 122px;
+      min-height: 257px;
+      }
+
+    @media #{$desktop} {
+      padding-top: 142px;
+      min-height: 220px;
+      }
+    }
+
+    .photo__title {
+      @include h2-mobile;
+
+
+      @media #{$tablet} {
+        @include h2-desktop;
+
+      }
+
+      @media #{$desktop} {
+        @include h2-desktop;
+
+      }
+    }
+
 
   .intro__inner--hero::before {
     content: "";
