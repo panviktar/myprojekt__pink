@@ -1,35 +1,38 @@
 
 .page-footer {
-  min-height: 127px;
+  min-height: 245px;
   background-color: $bg--white;
   color: $c--blue;
   width: auto;
   position: static;
 
+  @media #{$tablet} {
+    min-height: 130px;
+  }
+
   @media #{$desktop} {
     min-height: 197px;
   }
 
-  @media #{$mobile} {
-    display: none;
-  }
-
   &__wrapper {
-    padding-top: 40px;
-    padding-bottom: 35px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 40px;
-    padding-left: 40px;
     @include container;
-    width: 320px;
+    min-height: 245px;
+    padding-top: 40px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
       @media #{$tablet} {
+        min-height: 130px;
         width: 700px;
+        padding-bottom: 35px;
+        flex-direction: row;
       }
 
       @media #{$desktop} {
+        min-height: 197px;
         width: 1120px;
         padding-top: 75px;
         padding-bottom: 72px;
@@ -45,7 +48,6 @@
 
 
   &__link {
-    margin-left: -10px;
     display: flex;
     width: 45px;
     height: 45px;
@@ -54,8 +56,12 @@
     justify-content: center;
     align-items: center;
 
+      @media #{$tablet} {
+      margin-left: -10px;
+      }
+
       &:hover {
-        border: 3px solid $bg--blue;
+      border: 3px solid $bg--blue;
       }
 
       &:active {
@@ -63,9 +69,8 @@
       }
 
       @media #{$desktop} {
-          margin-left: 0;
+        margin-left: 0;
       }
-
     }
 
   &__copyright {
@@ -74,10 +79,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0;
 
-
-
-    @media #{$desktop} {
+  @media #{$desktop} {
       width: 150px;
       font-size: $fz--base;
     }
@@ -102,11 +106,9 @@
     }
   }
 
-
-
-
 .logo-footer__svg {
     margin-top: -10px;
+
 
     &:hover .logo__letter {
       fill: $c--pink;
@@ -116,4 +118,22 @@
     &:active .logo__glasses {
       fill: $c--black-opacity;
     }
+}
+
+.logo-footer__svg .logo__letter {
+  display: block;
+}
+
+.logo-footer__svg .logo__glasses--tablet {
+  display: block;
+
+  @media #{$desktop} {
+    display: none;
+  }
+}
+
+.page-footer--index {
+  @media #{$mobile} {
+    display: none;
+  }
 }

@@ -1,0 +1,47 @@
+.catalog {
+  color: $bg--blue;
+
+  &__act {
+    padding-top: 45px;
+    padding-bottom: 50px;
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: $fz--xsmall;
+    line-height: 30px;
+
+    @media #{$tablet} {
+      width: 450px;
+      padding-top: 95px;
+      padding-bottom: 80px;
+      font-size: $fz--base;
+    }
+
+    @media #{$desktop} {
+      padding-bottom: 90px;
+    }
+
+    &--end {
+      @media #{$tablet} {
+        padding-top: 70px;
+        padding-bottom: 70px;
+      }
+
+      @media #{$desktop} {
+        padding-top: 60px;
+        padding-bottom: 65px;
+      }
+    }
+  }
+
+  &__item {
+    &--head {
+      width: 100%;
+    }
+  }
+
+  &__wrapper {
+    @include container;
+    width: 320px;
+  }
+}

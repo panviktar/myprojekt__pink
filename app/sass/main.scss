@@ -24,7 +24,7 @@
 
 
 /* ===============================
-=            Content            =
+=            Content INDEX           =
 =============================== */
 
 @import "blocks/_intro";
@@ -33,6 +33,12 @@
 @import "blocks/_reviews";
 @import "blocks/_price";
 @import "blocks/_contacts";
+
+/* ===============================
+=            Content PHOTO           =
+=============================== */
+
+@import "blocks/_catalog";
 
 
 /* =====  End of Content  ====== */
@@ -44,7 +50,6 @@
 ============================== */
 
 @import "blocks/_page-footer";
-
 
 /* =====  End of Footer  ====== */
 
