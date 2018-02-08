@@ -138,224 +138,372 @@
 
 	<main class="main-photo">
 
-    <header class="intro  intro--short">
+		<header class="intro  intro--short">
 
-      <div class="intro__inner  intro__inner--photo">
-        <h2 class="photo__title"> Фотографии <br> пользователей </h2>
-      </div>
-    </header>
-
-
-
-<section class="catalog">
+			<div class="intro__inner  intro__inner--photo">
+				<h2 class="photo__title"> Фотографии <br> пользователей </h2>
+			</div>
+		</header>
 
 
-		<div class="catalog__act  catalog__act--start">
-			<p> Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших? </p>
-		</div>
 
-		<article class="catalog__item  catalog__item--head">
+		<section class="catalog">
 
-				<div class="post__picture">
+
+			<div class="catalog__act  catalog__act--start">
+				<p> Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших? </p>
+			</div>
+
+
+
+			<article class="post  post--panorama">
+
+				<a href="" class="post__panorama">
 					<span class="post__best-day"> Панорама дня </span>
 					<picture>
-						<source media="(min-width: 960px)" srcset="img/photo/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg 2x">
-						<source media="(min-width: 660px)" srcset="img/photo/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg 2x">
-						<img src="img/photo/panorama-mobile@1x.jpg" srcset="img/photo/panorama-mobile@2x.jpg 2x" alt="Анна">
+						<source media="(min-width: 1200px)" srcset="img/photos/panorama-desktop.jpg,
+									  img/photos/panorama-desktop@2x.jpg 2x">
+						<source media="(min-width: 700px)" srcset="img/photos/panorama-tablet.jpg,
+										 img/photos/panorama-tablet@2x.jpg 2x">
+						<img src="img/photos/panorama-mobile.jpg" srcset="img/photos/panorama-mobile@2x.jpg 2x" alt="Анна">
 					</picture>
-				</div>
+				</a>
 
+				<div class="post__body-wrapper">
 
-
-				<div class="post__quote">
+				<div class="post__body  post__body--panorama">
 					<span class="post__author"> Анна </span>
 					<span class="post__time">(5 минут назад) </span>
-					<span class="post__text"> Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы! </span>
-				</div>
-				<div class="post__emotion">
-					<span class="post__icon"> <a href="#"> <svg class="page-footer__copyright-icon" width="14" height="12">
-	  				<use xlink:href="#icon-heartz"/>
-					</svg> </a> </span>
-					<span class="post__like"> Нравится: 215 </span>
-				</div>
-			</article>
 
-<div class="catalog__wrapper">
+					<div class="post__text">
+						<p>Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы! </p>
+					</div>
 
-		<article class="catalog__item  post">
+				</div>
 
-				<div class="post__picture">
-					<picture>
-						<source media="(min-width: 960px)" srcset="img/photo/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg 2x">
-						<source media="(min-width: 660px)" srcset="img/photo/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg 2x">
-						<img src="img/photo/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Анна">
-					</picture>
+				<div class="post__emotion  post__emotion--panorama">
+					<button class="post__like-btn" type="button" title="Мне нравится">
+						Мне нравится
+					</button>
+					<a href="#" class="post__like-stat"> Нравится:
+					<span class="post__like"> 215 </span>
+					</a>
 				</div>
-				<div class="post__quote">
-					<span class="post__author"> Левон </span>
-					<span class="post__time">(5 часов назад) </span>
-					<span class="post__text"> Вчера он на луну летал, сегодня в руки к нам попал. </span>
+
 				</div>
-				<div class="post__emotion">
-					<span class="post__icon"> <a href="#"> <svg class="page-footer__copyright-icon" width="14" height="12">
-	  				<use xlink:href="#icon-heartz"/>
-					</svg> </a> </span>
-					<span class="post__like"> Нравится: 356 </span>
-				</div>
+
 			</article>
 
 
-		<article class="catalog__item">
+			<div class="gallery__post">
 
-				<div class="post__picture">
-					<picture>
-						<source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg 2x">
-						<source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg 2x">
-						<img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Анна">
-					</picture>
-				</div>
-				<div class="post__quote">
-					<span class="post__author"> Антон </span>
-					<span class="post__time">(12 часов назад) </span>
-					<span class="post__text"> Соседи будут рады! </span>
-				</div>
-				<div class="post__emotion">
-					<span class="post__icon"> <a href="#"> <svg class="page-footer__copyright-icon" width="14" height="12">
-	  				<use xlink:href="#icon-heartz"/>
-					</svg> </a> </span>
-					<span class="post__like"> Нравится: 666 </span>
-				</div>
-			</article>
+				<div class="post-list">
 
 
-		<article class="catalog__item">
 
-				<div class="post__picture">
-					<picture>
-						<source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg 2x">
-						<source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg 2x">
-						<img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Анна">
-					</picture>
-				</div>
-				<div class="post__quote">
-					<span class="post__author"> Борис </span>
-					<span class="post__time">(20 часов назад) </span>
-					<span class="post__text"> Здесь могла быть ваша цитата о высоком и вечном. </span>
-				</div>
-				<div class="post__emotion">
-					<span class="post__icon"> <a href="#"> <svg class="page-footer__copyright-icon" width="14" height="12">
-	  				<use xlink:href="#icon-heartz"/>
-					</svg> </a> </span>
-					<span class="post__like"> Нравится: 215 </span>
-				</div>
-			</article>
+				<article class="post">
 
+					<a class="post__picture" href="#">
+						<picture>
+							<source media="(min-width: 1200px)" srcset="img/photos/photo-1-desktop.jpg,
+									  img/photos/photo-1-desktop@2x.jpg 2x">
+							<source media="(min-width: 700px)" srcset="img/photos/photo-1-tablet.jpg,
+										 img/photos/photo-1-tablet@2x.jpg 2x">
+							<img src="img/photos/photo-1-mobile.jpg" srcset="img/photos/photo-1-mobile@2x.jpg 2x" alt="Анна">
+						</picture>
+					</a>
 
-		<article class="catalog__item">
+					<div class="post__body">
 
-				<div class="post__picture">
-					<picture>
-						<source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg 2x">
-						<source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg 2x">
-						<img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Анна">
-					</picture>
-				</div>
-				<div class="post__quote">
-					<span class="post__author"> Сергей </span>
-					<span class="post__time">(25 часов назад) </span>
-					<span class="post__text"> Самая кубанская в мире! </span>
-				</div>
-				<div class="post__emotion">
-					<span class="post__icon"> <a href="#"> <svg class="page-footer__copyright-icon" width="14" height="12">
-	  				<use xlink:href="#icon-heartz"/>
-					</svg> </a> </span>
-					<span class="post__like"> Нравится: 4 </span>
-				</div>
-			</article>
+						<span class="post__author"> Левон </span>
+						<span class="post__time">(5 часов назад) </span>
+
+					<div class="post__text">
+						<p>Вчера он на луну летал, сегодня в руки к нам попал. </p>
+					</div>
+
+					</div>
+
+					<div class="post__emotion">
+						<button class="post__like-btn" type="button" title="Мне нравится">
+							Мне нравится
+						</button>
+						<a href="#" class="post__like-stat"> Нравится:
+						<span class="post__like"> 356 </span>
+					</a>
+					</div>
+				</article>
 
 
-		<article class="catalog__item">
+				<article class="post">
 
-				<div class="post__picture">
-					<picture>
-						<source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg 2x">
-						<source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg 2x">
-						<img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Анна">
-					</picture>
-				</div>
-				<div class="post__quote">
-					<span class="post__author"> Максим </span>
-					<span class="post__time">(40 часов назад) </span>
-					<span class="post__text"> Где снег-то? </span>
-				</div>
-				<div class="post__emotion">
-					<span class="post__icon"> <a href="#"> <svg class="page-footer__copyright-icon" width="14" height="12">
-	  				<use xlink:href="#icon-heartz"/>
-					</svg> </a> </span>
-					<span class="post__like"> Нравится: 150 </span>
-				</div>
-			</article>
+					<a class="post__picture" href="#">
+						<picture>
+							<source media="(min-width: 1200px)" srcset="img/photos/photo-2-desktop.jpg,
+									  img/photos/photo-2-desktop@2x.jpg 2x">
+							<source media="(min-width: 700px)" srcset="img/photos/photo-2-tablet.jpg,
+										 img/photos/photo-2-tablet@2x.jpg 2x">
+							<img src="img/photos/photo-2-mobile.jpg" srcset="img/photos/photo-2-mobile@2x.jpg 2x" alt="Анна">
+						</picture>
+					</a>
+
+					<div class="post__body">
+						<span class="post__author"> Антон </span>
+						<span class="post__time">(12 часов назад) </span>
 
 
-		<article class="catalog__item">
+					<div class="post__text">
+						<p> Соседи будут рады! </p>
+					</div>
 
-				<div class="post__picture">
-					<picture>
-						<source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg 2x">
-						<source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg 2x">
-						<img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Анна">
-					</picture>
-				</div>
-				<div class="post__quote">
-					<span class="post__author"> Надежда </span>
-					<span class="post__time">(45 часов назад) </span>
-					<span class="post__text"> Всем GM и взаимные лайки! </span>
-				</div>
-				<div class="post__emotion">
-					<span class="post__icon"> <a href="#"> <svg class="page-footer__copyright-icon" width="14" height="12">
-	  				<use xlink:href="#icon-heartz"/>
-					</svg> </a> </span>
-					<span class="post__like"> Нравится: 2560 </span>
-				</div>
-			</article>
+					</div>
 
-			<div class="catalog__act  catalog__act--end">
-				<p> Затмите их всех! <br>
-					Выкладывайте все, что накопилось в телефоне! </p>
+					<div class="post__emotion">
+						<button class="post__like-btn" type="button" title="Мне нравится">
+							Мне нравится
+						</button>
+						<a href="#" class="post__like-stat"> Нравится:
+						<span class="post__like"> 666 </span>
+						</a>
+					</div>
+				</article>
+
+
+				<article class="post">
+
+					<a class="post__picture" href="#">
+
+						<picture>
+							<source media="(min-width: 1200px)" srcset="img/photos/photo-3-desktop.jpg,
+									  img/photos/photo-3-desktop@2x.jpg 2x">
+							<source media="(min-width: 700px)" srcset="img/photos/photo-3-tablet.jpg,
+										 img/photos/photo-3-tablet@2x.jpg 2x">
+							<img src="img/photos/photo-3-mobile.jpg" srcset="img/photos/photo-3-mobile@2x.jpg 2x" alt="Анна">
+						</picture>
+					</a>
+
+					<div class="post__body">
+						<span class="post__author"> Борис </span>
+						<span class="post__time">(20 часов назад) </span>
+
+
+					<div class="post__text">
+						<p>Здесь могла быть ваша цитата о высоком и вечном. </p>
+					</div>
+
+					</div>
+
+					<div class="post__emotion">
+						<button class="post__like-btn" type="button" title="Мне нравится">
+							Мне нравится
+						</button>
+						<a href="#" class="post__like-stat"> Нравится:
+						<span class="post__like"> 215 </span>
+						</a>
+					</div>
+				</article>
+
+
+				<article class="post">
+
+					<a class="post__picture" href="#">
+
+						<picture>
+							<source media="(min-width: 1200px)" srcset="img/photos/photo-4-desktop.jpg,
+									  img/photos/photo-4-desktop@2x.jpg 2x">
+							<source media="(min-width: 700px)" srcset="img/photos/photo-4-tablet.jpg,
+										 img/photos/photo-4-tablet@2x.jpg 2x">
+							<img src="img/photos/photo-4-mobile.jpg" srcset="img/photos/photo-4-mobile@2x.jpg 2x" alt="Анна">
+						</picture>
+					</a>
+
+					<div class="post__body">
+						<span class="post__author"> Сергей </span>
+						<span class="post__time">(25 часов назад) </span>
+
+					<div class="post__text">
+						<p>Самая кубанская в мире! </p>
+					</div>
+
+					</div>
+
+					<div class="post__emotion">
+						<button class="post__like-btn" type="button" title="Мне нравится">
+							Мне нравится
+						</button>
+						<a href="#" class="post__like-stat"> Нравится:
+						<span class="post__like"> 4 </span>
+						</a>
+					</div>
+				</article>
+
+
+				<article class="post">
+
+					<a class="post__picture" href="#">
+
+						<picture>
+							<source media="(min-width: 1200px)" srcset="img/photos/photo-5-desktop.jpg,
+									  img/photos/photo-5-desktop@2x.jpg 2x">
+							<source media="(min-width: 700px)" srcset="img/photos/photo-5-tablet.jpg,
+										 img/photos/photo-5-tablet@2x.jpg 2x">
+							<img src="img/photos/photo-5-mobile.jpg" srcset="img/photos/photo-5-mobile@2x.jpg 2x" alt="Анна">
+						</picture>
+					</a>
+					<div class="post__body">
+						<span class="post__author">Максим </span>
+						<span class="post__time">(40 часов назад) </span>
+
+					<div class="post__text">
+						<p> Где снег-то? </p>
+					</div>
+
+					</div>
+
+					<div class="post__emotion">
+						<button class="post__like-btn" type="button" title="Мне нравится">
+							Мне нравится
+						</button>
+						<a href="#" class="post__like-stat"> Нравится:
+						<span class="post__like"> 150 </span>
+						</a>
+					</div>
+				</article>
+
+
+				<article class="post">
+
+					<a class="post__picture" href="#">
+
+						<picture>
+							<source media="(min-width: 1200px)" srcset="img/photos/photo-6-desktop.jpg,
+									  img/photos/photo-6-desktop@2x.jpg 2x">
+							<source media="(min-width: 700px)" srcset="img/photos/photo-6-tablet.jpg,
+										 img/photos/photo-6-tablet@2x.jpg 2x">
+							<img src="img/photos/photo-6-mobile.jpg" srcset="img/photos/photo-6-mobile@2x.jpg 2x" alt="Анна">
+						</picture>
+					</a>
+					<div class="post__body">
+						<span class="post__author"> Надежда </span>
+						<span class="post__time">(45 часов назад) </span>
+
+					<div class="post__text">
+						<p> Всем GM и взаимные лайки! </p>
+					</div>
+
+					</div>
+
+					<div class="post__emotion">
+						<button class="post__like-btn" type="button" title="Мне нравится">
+							Мне нравится
+						</button>
+						<a href="#" class="post__like-stat"> Нравится:
+						<span class="post__like"> 2560</span>
+						</a>
+					</div>
+				</article>
+
 			</div>
 
-	</div>
-
-</section>
-
-
-
-<section class="editor">
-
-	<div class="editor__wrapper">
-		<div class="editor__picture"></div>
-		<div class="editor__tools">
-			<div class="editor__icons">
-				<span class="editor__icon"></span>
-				<span class="editor__icon"></span>
-				<span class="editor__icon"></span>
 			</div>
-			<div class="editor__togler">
+
+				<div class="catalog__act  catalog__act--end">
+					<p> Затмите их всех! <br> Выкладывайте все, что накопилось в телефоне! </p>
+				</div>
+
+
+
+		</section>
+
+
+
+		<section class="editor">
+
+			<div class="editor__wrapper">
+
+				<form method="post" action="http://echo.htmlacademy.ru" class="editor__form">
+
+				<figure class="editor__picture">
+
+
+					<picture>
+						<source media="(min-width: 1200px)" srcset="img/photos/photos-7-desktop.jpg,
+								img/photos/photo-7-desktop@2x.jpg 2x">
+						<source media="(min-width: 700px)" srcset="img/photos/photo-1-tablet.jpg,
+								 img/photos/photo-7-tablet@2x.jpg 2x">
+						<img src="img/photos/photo-7-mobile.jpg" srcset="img/photos/photo-7-mobile@2x.jpg 2x" alt="Анна">
+					</picture>
+
+				</figure>
+
+				<div class="editor__tools">
+
+
+
+						<div class="editor__tool">
+							<div class="editor__tool-icon  editor__tool-icon--crop"></div>
+
+							<div class="editor__control  editor__control--crop">
+								<div class="editor__range  editor__range--crop">
+									<div class="editor__range-scale">
+										<div class="editor__range-value" style="width: 84%;">
+										</div>
+									</div>
+									<div class="editor__range-btn" tabindex="0"></div>
+								</div>
+							</div>
+
+
+						</div>
+
+						<div class="editor__tool">
+							<div class="editor__tool-icon  editor__tool-icon--fill"></div>
+
+							<div class="editor__control  editor__control--fill">
+								<div class="editor__range  editor__range--fill">
+									<div class="editor__range-scale">
+										<div class="editor__range-value" style="width: 84%;">
+										</div>
+									</div>
+									<div class="editor__range-btn" tabindex="0"></div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="editor__tool">
+							<div class="editor__tool-icon  editor__tool-icon--contrast"></div>
+
+							<div class="editor__control  editor__control--contrast">
+								<div class="editor__range  editor__range--contrast">
+									<div class="editor__range-scale">
+										<div class="editor__range-value" style="width: 84%;">
+										</div>
+									</div>
+									<div class="editor__range-btn" tabindex="0"></div>
+								</div>
+							</div>
+
+						</div>
+
+
+				</div>
+
+				<div class="editor__buttons">
+					<button class="editor__btn  editor__btn--post" type="submit">  Запостить </button>
+					<button class="editor__btn  editor__btn--esc" type="reset"> Отмена </button>
+				</div>
+
+			</form>
 
 			</div>
-		</div>
-		<div class="editor__buttons">
-			<button class="editor__post"></button>
-			<button class="editor__esc"></button>
-		</div>
-	</div>
 
-</section>
+		</section>
 
 
-  </main>
+	</main>
 
-  <footer class="page-footer">
+	<footer class="page-footer">
 
 		<div class="page-footer__wrapper">
 
