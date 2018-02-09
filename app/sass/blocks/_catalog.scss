@@ -59,4 +59,85 @@
 
 .post {
 
+  &__body-wrapper {
+    @include container;
+    width: 320px;
+
+    @media #{$tablet} {
+      width: 700px;
+    }
+
+    @media #{$desktop} {
+      width: 1120px;
+    }
+  }
+
+  &__body {
+    background-color: $bg--gray;
+    padding: 22px 18px 25px 18px;
+
+
+    @media #{$tablet} {
+    padding: 28px;
+    }
+
+    @media #{$desktop} {
+
+    }
+  }
+
+  &__author {
+    font-size: $fz--xsmall;
+    font-weight: $bold;
+  }
+
+  &__time {
+    font-size: $fz--xxsmall;
+    font-weight: $light;
+    text-transform: uppercase;
+    color: $c--black-opacity;
+  }
+
+  &__text {
+    font-size: $fz--xsmall;
+    line-height: 24px;
+  }
+
+  &__emotion {
+    display: flex;
+  }
+
+  &__like-btn {
+    font-size: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 13px;
+    height: 12px;
+    margin-right: 19px;
+
+
+    @media #{$tablet} {
+      width: 14px;
+      height: 12px;
+      margin-right: 0;
+      margin-left: 10px;
+      order: 2;
+    }
+  }
+
+  &__like-stat {
+    font-size: $fz--xxsmall;
+    text-transform: uppercase;
+    color: $c--pink;
+    text-decoration: none;
+    cursor: pointer;
+    order: 1;
+  }
+
+  &__like-icon {
+    fill: $c--pink;
+  }
+
 }
