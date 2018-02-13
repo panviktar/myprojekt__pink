@@ -3,15 +3,12 @@
 @mixin retina {
   min-resolution: 144dpi;
   min-resolution: 1.5dppx;
-
 }
-
 
 @mixin h1 {
   font-size: $fz--xxlarge;
   line-height: 1.2;
   font-weight: $light;
-
 }
 
 
@@ -19,7 +16,6 @@
   font-size: $fz--xmedium;
   line-height: 1.2;
   font-weight: $light;
-
 }
 
 @mixin h2-tablet {

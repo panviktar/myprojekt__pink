@@ -114,12 +114,12 @@
       @media #{$tablet} {
         background-image: url("../img/bg/map-tablet-desktop.jpg");
         height: 380px;
-        background-size: 100% 380px;
+        background-size: 700px 380px;
       }
 
       @media #{$desktop} {
         height: 505px;
-        background-size: 100% 505px;
+        background-size: 1200px 505px;
       }
 
     &::before {

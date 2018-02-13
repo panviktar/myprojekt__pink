@@ -1,0 +1,243 @@
+.catalog {
+  color: $bg--blue;
+
+  &__act {
+    padding-top: 45px;
+    padding-bottom: 50px;
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: $fz--xsmall;
+    line-height: 30px;
+    @media #{$tablet} {
+      width: 450px;
+      padding-top: 95px;
+      padding-bottom: 80px;
+      font-size: $fz--base;
+    }
+    @media #{$desktop} {
+      padding-bottom: 90px;
+    }
+
+    &--end {
+      @media #{$tablet} {
+        padding-top: 70px;
+        padding-bottom: 70px;
+      }
+      @media #{$desktop} {
+        padding-top: 60px;
+        padding-bottom: 65px;
+      }
+    }
+  }
+
+  &__wrapper {
+    @include container;
+    width: 320px;
+  }
+}
+
+.post-list {
+  margin: 0 auto;
+  width: 280px;
+
+  & :last-child {
+    margin-bottom: 0;
+  }
+  @media #{$tablet} {
+    @include container;
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & :nth-child(odd) {
+      margin-right: 20px;
+    }
+  }
+  @media #{$desktop} {
+    & :nth-child(3),
+    & :nth-child(6) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.post-panorama {
+  @include container;
+  width: 320px;
+  margin-bottom: 20px;
+
+  @media #{$tablet} {
+  width: 700px;
+  margin-bottom: 50px;
+
+  }
+  @media #{$desktop} {
+  max-width: 1200px;
+  }
+}
+
+.post {
+  margin-bottom: 20px;
+
+  @media #{$tablet} {
+    width: 300px;
+    margin-bottom: 0;
+  }
+  @media #{$desktop} {
+    margin-right: 20px;
+  }
+
+  // &__best-day {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 50%;
+  //   display: inline-block;
+  //   vertical-align: top;
+  //   padding: 6px 20px;
+  //   background-color: $bg--pink;
+  //   color: $c--white;
+  //   font-size: $fz--xxsmall;
+  //   font-weight: $bold;
+  //   text-transform: uppercase;
+  //   text-align: right;
+  //
+  //   @media #{$tablet} {
+  //     transform: translateX(640px);
+  //     top: 57px;
+  //   }
+  //   @media #{$desktop} {
+  //     transform: translateX(870px);
+  //     top: 54px;
+  //   }
+  // }
+
+
+  &__body-wrapper {
+    background-color: $bg--gray;
+    padding: 22px 18px 26px;
+    margin-top: -4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media #{$tablet} {
+      padding: 28px 0 28px 28px;
+      min-height: 125px;
+    }
+    &--panorama {
+      width: 240px;
+      margin: 0 auto;
+
+      @media #{$tablet} {
+          min-height: 80px;
+        margin-top: -5px;
+        width: 645px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 28px 28px 10px 28px;
+      }
+      @media #{$desktop} {
+        width: 1143px;
+      }
+    }
+
+  }
+
+  &__body {
+
+    &--panorama {
+
+    @media #{$tablet} {
+    order: 1;
+      }
+    }
+    @media #{$tablet} {
+      overflow: hidden;
+    }
+    @media #{$desktop} {}
+  }
+
+  &__author {
+    font-size: $fz--xsmall;
+    font-weight: $bold;
+  }
+
+  &__time {
+    font-size: $fz--xxsmall;
+    font-weight: $light;
+    text-transform: uppercase;
+    color: $c--black-opacity;
+  }
+
+  &__text {
+    font-size: $fz--xsmall;
+    line-height: 24px;
+    margin-top: -10px;
+      &--panorama {
+        @media #{$tablet} {
+        order: 3;
+      }
+      }
+  }
+
+  &__emotion {
+    margin-top: 15px;
+    background-color: $bg--gray;
+
+      @media #{$tablet} {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+    &--panorama {
+      @media #{$tablet} {
+      margin-top: 5px;
+      order: 2;
+      }
+    }
+  }
+
+  &__like-btn {
+    font-size: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+    width: 13px;
+    height: 12px;
+    margin: 0 19px 0 0;
+    padding: 0;
+    @media #{$tablet} {
+      width: 14px;
+      height: 12px;
+      margin: 0;
+      order: 2;
+    }
+    }
+  }
+
+
+
+  &__like-stat {
+    font-size: $fz--xxsmall;
+    text-transform: uppercase;
+    color: $c--pink;
+    text-decoration: none;
+    cursor: pointer;
+    order: 1;
+
+    &--panorama {
+      @media #{$tablet} {
+    margin-right: 18px;
+      }
+    }
+  }
+
+  &__like-icon {
+    fill: $c--pink;
+  }
+}

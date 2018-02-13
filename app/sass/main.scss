@@ -2,11 +2,11 @@
 =            Global            =
 ============================== */
 
-@import "global/_variables";
-@import "global/_fonts";
-@import "global/_mixin";
-@import "global/_base";
-@import "global/normalize";
+@import "_global/_variables";
+@import "_global/_fonts";
+@import "_global/_mixin";
+@import "_global/_base";
+@import "_global/normalize";
 
 
 /* =====  End of Global  ====== */
@@ -16,8 +16,8 @@
 =            Header            =
 ============================== */
 
-@import "blocks/_page-header";
-@import "blocks/_main-nav";
+@import "_blocks/_page-header";
+@import "_blocks/_main-nav";
 
 
 /* =====  End of Header  ====== */
@@ -27,18 +27,18 @@
 =            Content INDEX           =
 =============================== */
 
-@import "blocks/_intro";
-@import "blocks/_download";
-@import "blocks/_promo";
-@import "blocks/_reviews";
-@import "blocks/_price";
-@import "blocks/_contacts";
+@import "_blocks/_intro";
+@import "_blocks/_download";
+@import "_blocks/_promo";
+@import "_blocks/_reviews";
+@import "_blocks/_price";
+@import "_blocks/_contacts";
 
 /* ===============================
 =            Content PHOTO           =
 =============================== */
 
-@import "blocks/_catalog";
+@import "_blocks/_catalog";
 
 
 /* =====  End of Content  ====== */
@@ -49,7 +49,7 @@
 =            Footer            =
 ============================== */
 
-@import "blocks/_page-footer";
+@import "_blocks/_page-footer";
 
 /* =====  End of Footer  ====== */
 
