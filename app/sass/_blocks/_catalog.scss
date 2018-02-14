@@ -67,6 +67,7 @@
   @include container;
   width: 320px;
   margin-bottom: 20px;
+  position: relative;
 
   @media #{$tablet} {
   width: 700px;
@@ -89,29 +90,29 @@
     margin-right: 20px;
   }
 
-  // &__best-day {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 50%;
-  //   display: inline-block;
-  //   vertical-align: top;
-  //   padding: 6px 20px;
-  //   background-color: $bg--pink;
-  //   color: $c--white;
-  //   font-size: $fz--xxsmall;
-  //   font-weight: $bold;
-  //   text-transform: uppercase;
-  //   text-align: right;
-  //
-  //   @media #{$tablet} {
-  //     transform: translateX(640px);
-  //     top: 57px;
-  //   }
-  //   @media #{$desktop} {
-  //     transform: translateX(870px);
-  //     top: 54px;
-  //   }
-  // }
+  &__best-day {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 11px 20px;
+    background-color: $bg--pink;
+    color: $c--white;
+    font-size: $fz--xxsmall;
+    font-weight: $bold;
+    text-transform: uppercase;
+    text-align: right;
+
+    @media #{$tablet} {
+      transform: translateX(170px);
+      top: 57px;
+    }
+    @media #{$desktop} {
+      transform: translateX(320px);
+      top: 54px;
+    }
+  }
 
 
   &__body-wrapper {
@@ -125,13 +126,15 @@
     @media #{$tablet} {
       padding: 28px 0 28px 28px;
       min-height: 125px;
+      margin-top: -25px;
     }
     &--panorama {
       width: 240px;
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
 
       @media #{$tablet} {
-          min-height: 80px;
+        min-height: 80px;
         margin-top: -5px;
         width: 645px;
         flex-direction: row;
@@ -140,24 +143,26 @@
         padding: 28px 28px 10px 28px;
       }
       @media #{$desktop} {
-        width: 1143px;
+        margin-top: -3px;
+        width: 880px;
+        transform: translateX(-10px);
+
       }
     }
-
   }
 
   &__body {
-
     &--panorama {
-
     @media #{$tablet} {
     order: 1;
       }
+    @media #{$desktop} {
+      width: 50%;
     }
+  }
     @media #{$tablet} {
       overflow: hidden;
     }
-    @media #{$desktop} {}
   }
 
   &__author {
@@ -177,10 +182,11 @@
     line-height: 24px;
     margin-top: -10px;
       &--panorama {
+
         @media #{$tablet} {
         order: 3;
       }
-      }
+    }
   }
 
   &__emotion {
@@ -191,8 +197,9 @@
       display: flex;
       justify-content: space-between;
       margin-top: 15px;
-    }
+      }
     &--panorama {
+      margin-top: 0;
       @media #{$tablet} {
       margin-top: 5px;
       order: 2;
@@ -216,11 +223,8 @@
       height: 12px;
       margin: 0;
       order: 2;
+      }
     }
-    }
-  }
-
-
 
   &__like-stat {
     font-size: $fz--xxsmall;
