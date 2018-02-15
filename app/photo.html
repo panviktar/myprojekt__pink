@@ -474,9 +474,9 @@
 
 
 					<picture>
-						<source media="(min-width: 1200px)" srcset="img/photos/photos-7-desktop.jpg,
+						<source media="(min-width: 1200px)" srcset="img/photos/photo-7-desktop.jpg,
 								img/photos/photo-7-desktop@2x.jpg 2x">
-						<source media="(min-width: 700px)" srcset="img/photos/photo-1-tablet.jpg,
+						<source media="(min-width: 700px)" srcset="img/photos/photo-7-tablet.jpg,
 								 img/photos/photo-7-tablet@2x.jpg 2x">
 						<img src="img/photos/photo-7-mobile.jpg" srcset="img/photos/photo-7-mobile@2x.jpg 2x" alt="Анна">
 					</picture>
@@ -488,7 +488,11 @@
 
 
 						<div class="editor__tool">
-							<div class="editor__tool-icon  editor__tool-icon--crop"></div>
+
+								<svg class="editor__tool-icon  editor__tool-icon--crop" width="44" height="44">
+				  				<use xlink:href="#icon-editor-crop"/>
+								</svg>
+
 
 							<div class="editor__control  editor__control--crop">
 								<div class="editor__range  editor__range--crop">
@@ -504,7 +508,10 @@
 						</div>
 
 						<div class="editor__tool">
-							<div class="editor__tool-icon  editor__tool-icon--fill"></div>
+
+						<svg class="editor__tool-icon  editor__tool-icon--fill" width="48" height="43">
+							<use xlink:href="#icon-editor-fill"/>
+						</svg>
 
 							<div class="editor__control  editor__control--fill">
 								<div class="editor__range  editor__range--fill">
@@ -519,7 +526,10 @@
 						</div>
 
 						<div class="editor__tool">
-							<div class="editor__tool-icon  editor__tool-icon--contrast"></div>
+
+						<svg class="editor__tool-icon  editor__tool-icon--contrast" width="32" height="32">
+							<use xlink:href="#icon-editor-contrast"/>
+						</svg>
 
 							<div class="editor__control  editor__control--contrast">
 								<div class="editor__range  editor__range--contrast">

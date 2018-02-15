@@ -1,0 +1,194 @@
+.editor {
+  background-color: $bg--gray;
+
+  &__wrapper {
+    position: relative;
+    @include container;
+    width: 320px;
+    padding-top: 20px;
+
+    @media #{$tablet} {
+    width: 700px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+      }
+    @media #{$desktop} {
+    width: 940px;
+    padding-left: 70px;
+    }
+  }
+
+  &__form {
+    @media #{$tablet} {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+
+    @media #{$desktop} {
+      width: 870px;
+    }
+  }
+
+  &__picture {
+    margin: 0 0 0 20px;
+    @media #{$tablet} {
+        margin: 0 0 0 40px;
+    }
+  }
+
+  &__tools {
+    padding-top: 42px;
+    padding-bottom: 28px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @media #{$tablet} {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-top: -15px;
+      margin-right: 40px;
+
+
+        }
+    }
+
+  &__tool {
+
+    @media #{$tablet} {
+      width: 275px;
+      height: 72px;
+      border-bottom: 1px solid $bg--gray-darker;
+      display: flex;
+      align-items: center;
+    }
+
+      @media #{$desktop} {
+        width: 410px;
+      }
+  }
+
+  &__tool-icon {
+    fill: $bg--gray-button-darker;
+
+      @media #{$tablet} {
+        fill: $bg--pink;
+      }
+
+
+    &:hover {
+      fill: $bg--gray-darker;
+      }
+
+    @media #{$tablet} {
+      &--contrast {
+        width: 16px;
+        height: 16px;
+      }
+      &--fill {
+        width: 24px;
+        height: 22px;
+      }
+      &--crop {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    @media #{$desktop} {
+      &--contrast {
+        width: 32px;
+        height: 32px;
+      }
+      &--fill {
+        width: 49px;
+        height: 42px;
+      }
+      &--crop {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+
+  }
+
+  &__buttons {
+    padding-top: 38px;
+    padding-bottom: 41px;
+    display: flex;
+    flex-direction: column;
+
+    @media #{$tablet} {
+      width: 260px;
+      position: absolute;
+      bottom: 15px;
+      right: 52px;
+    }
+
+    @media #{$desktop} {
+      flex-direction: row;
+      width: 410px;
+      right: 330px;
+    }
+  }
+
+  &__btn {
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: $fz--base;
+    font-weight: $bold;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 17px 0;
+    color: $c--white;
+    outline: none;
+
+      &--post {
+        margin-bottom: 12px;
+        color: $c--pink;
+        border: 3px solid $c--pink;
+        background-color: $bg--gray;
+
+        &:hover {
+          color: $c--white;
+          background-color: $c--pink;
+        }
+        &:active {
+          color: $c--white-opacity;
+          background-color: $c--pink;
+        }
+
+        @media #{$desktop} {
+          margin-bottom: 0;
+        }
+      }
+
+      &--esc {
+        color: $bg--gray-light;
+        border: 3px solid $bg--gray-light;
+        background-color: $bg--gray;
+
+        &:hover {
+          color: $bg--gray-button-darker;
+          border: 3px solid $bg--gray-button-darker;
+        }
+        &:active {
+          color: $bg--gray-darker;
+          background-color: $bg--gray-button-darker;
+        }
+      }
+      @media #{$tablet} {
+      width: 260px;
+
+      }
+      @media #{$desktop} {
+      width: 183px;
+      }
+  }
+}
