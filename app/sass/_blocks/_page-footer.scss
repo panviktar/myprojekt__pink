@@ -15,10 +15,12 @@
   }
 
   &__wrapper {
-    @include container;
+  margin-left: auto;
+  margin-right: auto;
     min-height: 245px;
     padding-top: 40px;
     padding-bottom: 0;
+    width: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,14 +28,15 @@
 
       @media #{$tablet} {
         min-height: 130px;
-        width: 700px;
+        width: 620px;
         padding-bottom: 35px;
         flex-direction: row;
       }
 
       @media #{$desktop} {
         min-height: 197px;
-        width: 1120px;
+        width: 960px;
+
         padding-top: 75px;
         padding-bottom: 72px;
       }

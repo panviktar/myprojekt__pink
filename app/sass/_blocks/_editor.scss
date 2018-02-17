@@ -13,8 +13,7 @@
     padding-bottom: 55px;
       }
     @media #{$desktop} {
-    width: 940px;
-    padding-left: 70px;
+    width: 1120px;
     }
   }
 
@@ -28,22 +27,29 @@
 
     @media #{$desktop} {
       width: 870px;
+      justify-content: center;
+      @include container;
+
     }
   }
 
   &__picture {
     margin: 0 0 0 20px;
     @media #{$tablet} {
-        margin: 0 0 0 40px;
+      margin: 0 0 0 40px;
+    }
+    @media #{$desktop} {
+      margin-right: 90px;
     }
   }
 
   &__tools {
     padding-top: 42px;
-    padding-bottom: 28px;
+    padding-bottom: 75px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-bottom: 1px solid $bg--gray-darker;
 
     @media #{$tablet} {
       flex-direction: column;
@@ -52,41 +58,67 @@
       padding-bottom: 0;
       margin-top: -15px;
       margin-right: 40px;
-
-
-        }
+      border-bottom: none;
     }
+  }
 
   &__tool {
+    position: relative;
+
 
     @media #{$tablet} {
-      width: 275px;
-      height: 72px;
+      width: 255px;
+      min-height: 72px;
       border-bottom: 1px solid $bg--gray-darker;
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      padding-right: 18px;
     }
 
       @media #{$desktop} {
-        width: 410px;
+        width: 380px;
+        padding-right: 30px;
       }
   }
 
   &__tool-icon {
-    fill: $bg--gray-button-darker;
+    fill: $bg--gray-darker;
+    cursor: pointer;
+    &--crop  {
+    margin-left: 30px;
+    }
+
+    &--contrast {
+      margin-right: 30px;
+    }
 
       @media #{$tablet} {
         fill: $bg--pink;
+        margin-left: 3px;
+      }
+
+      @media #{$desktop} {
+        margin-left: 0;
       }
 
 
     &:hover {
-      fill: $bg--gray-darker;
+      fill: $bg--gray-button-darker;
       }
+
+      &--active {
+      fill: $bg--pink;
+        &:hover {
+        fill: $bg--pink;
+        }
+      }
+
 
     @media #{$tablet} {
       &--contrast {
         width: 16px;
+        margin-left: 6px;
         height: 16px;
       }
       &--fill {
@@ -96,6 +128,13 @@
       &--crop {
         width: 22px;
         height: 22px;
+      }
+
+      &--active {
+      fill: $bg--pink;
+        &:hover {
+        fill: $bg--gray-button-darker;
+        }
       }
     }
 
@@ -113,8 +152,68 @@
         height: 45px;
       }
     }
+  }
 
+  &__range {
+    height: 2px;
+    background-color: $bg--blue;
+    position: relative;
+    z-index: 5;
+    width: 240px;
+    position: absolute;
+    bottom: -33px;
+    left: 20px;
 
+    &--fill {
+    display: none;
+    }
+    &--contrast {
+    display: none;
+    }
+
+    @media #{$tablet} {
+    position: relative;
+    width: 202px;
+    bottom: 0;
+    left: 0;
+    &--fill {
+      display: flex;
+
+    }
+    &--contrast {
+      display: flex;
+
+    }
+    }
+
+    @media #{$desktop} {
+      width: 290px;
+    }
+  }
+
+  &__range-scale {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid $bg--pink;
+    background-color: $bg--white;
+    position: absolute;
+    z-index: 10;
+    top: -5px;
+      &:active {
+        background-color: $bg--pink;
+      }
+    &--crop {
+      left: 20%;
+    }
+
+    &--fill {
+      left: 90%;
+    }
+
+    &--contrast {
+      left: 60%;
+    }
   }
 
   &__buttons {
@@ -128,12 +227,14 @@
       position: absolute;
       bottom: 15px;
       right: 52px;
+    bottom: 17px;
     }
 
     @media #{$desktop} {
       flex-direction: row;
       width: 410px;
-      right: 330px;
+      right: 195px;
+
     }
   }
 
@@ -166,6 +267,7 @@
 
         @media #{$desktop} {
           margin-bottom: 0;
+          margin-right: 45px;
         }
       }
 

@@ -86,6 +86,8 @@
   }
 }
 @media #{$tablet-only} {
+
+
   // гамбургер
   .main-nav--closed .main-nav__toggle::before {
     content: "";
@@ -110,7 +112,12 @@
 
   .main-nav--opened .main-nav__wrapper {
     background-color: $bg--blue;
+    }
+
+  .main-nav--opened  .logo__svg {
+    padding: 25px 40px 40px 40px;
   }
+
 
   .main-nav--opened .main-nav__list {
     width: 100%;
@@ -191,7 +198,7 @@
   }
 
   .main-nav--closed .main-nav__toggle::before {
-    top: 40px;
+    top: 42px;
   }
 
   .main-nav--opened .main-nav__toggle {
@@ -323,7 +330,7 @@
 @media #{$tablet} {
   .logo {
     &__svg {
-    padding: 20px 40px 40px 40px;
+    padding: 25px 40px 25px 40px;
     }
     &__letter--mobile {
     display: none;
