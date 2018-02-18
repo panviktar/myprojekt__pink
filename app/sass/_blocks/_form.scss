@@ -1,9 +1,20 @@
 .form {
   color: $bg--blue;
+  @include container;
+  width: 320px;
+  padding-top: 20px;
+  @media #{$tablet} {
+    width: 700px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  @media #{$desktop} {
+    width: 1120px;
+  }
 
   &__act {
-    padding-top: 35px;
-    padding-bottom: 45px;
+    padding-top: 0;
+    padding-bottom: 15px;
     width: 320px;
     margin: 0 auto;
     text-align: center;
@@ -11,15 +22,304 @@
     line-height: 30px;
     @media #{$tablet} {
       width: 580px;
-      padding-top: 85px;
-      padding-bottom: 70px;
+      padding-top: 20px;
+      padding-bottom: 50px;
       font-size: $fz--base;
     }
     @media #{$desktop} {
       width: 820px;
-      padding-bottom: 65px;
+    }
+  }
+
+  &__contest {
+    font-size: $fz--base;
+    line-height: 30px;
+  }
+
+  &__contest ul {
+    list-style-type: none;
+    list-style-position: outside;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__list-name-wrapper {
+    padding-bottom: 30px;
+    @media #{$tablet} {
+      padding-bottom: 1px;
+      width: 716px;
+    }
+  }
+
+  &__item-input {
+    padding: 12px;
+    position: relative;
+    @media #{$tablet} {
+      display: flex;
+      align-items: center;
+      margin-bottom: 35px;
+    }
+  }
+
+  &__item-input label {
+    margin-left: 10px;
+    width: 250px;
+    margin-bottom: 5px;
+    display: block;
+    font-size: $fz--xsmall;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: $c--pink;
+    @media #{$tablet} {
+      width: auto;
+      margin-right: 20px;
+      margin-left: -10px;
+    }
+  }
+
+  &__item-input input {
+    margin-left: -13px;
+    width: 280px;
+    padding: 20px;
+    border: 2px solid $bg--gray-darker;
+    border-radius: 2px;
+    font-size: $fz--base;
+    line-height: 30px;
+    color: $c--blue;
+
+    &:hover {
+      border: 2px solid $bg--blue;
     }
 
+    &:focus {
+      outline: none;
+      border: 2px solid $bg--pink;
+    }
 
+    &:active {
+      border: 2px solid $bg--pink;
+    }
+
+    &::placeholder {
+      color: $c--blue;
+    }
+    @media #{$tablet} {
+      flex-grow: 1;
+      margin-left: 0;
+    }
   }
+
+  &__checkbox-list {
+    background-color: $bg--gray;
+    @media #{$tablet} {
+      background-color: $bg--white;
+    }
+  }
+
+  &__checkbox-list-wrapper {
+    padding-bottom: 1px;
+    position: relative;
+    z-index: 5;
+    @media #{$tablet} {
+      padding-top: 60px;
+      width: 640px;
+      padding-left: 60px;
+      border: 1px solid $bg--gray-darker;
+    }
+  }
+
+  &__list-title {
+    display: block;
+    font-size: $fz--xsmall;
+    text-transform: uppercase;
+    color: $c--pink;
+    line-height: 1.4;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    width: 220px;
+    text-align: center;
+
+    &--checkbox {
+      margin-bottom: 50px;
+    }
+
+    &--contact {
+      @media #{$tablet} {
+        margin-top: 50px;
+      }
+    }
+    @media #{$tablet} {
+      width: 440px;
+      position: relative;
+      margin-bottom: -10px;
+      z-index: 10;
+      background-color: $bg--white;
+      padding-top: 0;
+    }
+  }
+
+  &__checkbox-item {
+    margin-bottom: 60px;
+    position: relative;
+  }
+
+  &__checkbox-item input[type="checkbox"] {
+    display: none;
+  }
+
+  &__checkbox-item input[type="checkbox"] + label {
+    font-size: $fz--base;
+    line-height: 30px;
+    color: $c--blue;
+    cursor: pointer;
+    padding-left: 70px;
+  }
+
+  &__checkbox-item input[type="checkbox"] + label::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    background: $bg--white;
+    border: 2px solid $bg--gray-darker;
+    left: 0;
+    top: -3px;
+  }
+
+  &__checkbox-item input[type="checkbox"]:checked + label::before {
+    background: $bg--white url("../../img/svg-sprite/icon-yes-pink.svg") no-repeat center;
+    background-size: 22px 22px;
+  }
+
+  &__list-contact-wrapper {
+    padding-bottom: 15px;
+    padding-top: 25px;
+    @media #{$tablet} {
+      border: 1px solid $bg--gray-darker;
+    }
+  }
+
+  &__list-title--contact {
+    display: none;
+    @media #{$tablet} {
+      display: block;
+      width: 265px;
+    }
+  }
+  /* ==============================
+  =  Замена наполнения формы контактов в мобильной версии и планшет-версии            =
+  ============================== */
+  &__input--tablet,
+  &__label-mail--2,
+  &__label-phone--2 {
+    display: none;
+    @media #{$tablet} {
+      display: inline-block;
+    }
+  }
+
+  &__input--mobile,
+  &__label-mail--1,
+  &__label-phone--1 {
+    @media #{$tablet} {
+      display: none;
+    }
+  }
+
+  &__item-input--mail,
+  &__item-input--phone {
+    @media #{$tablet} {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__item-input--mail label,
+  &__item-input--phone label {
+    @media #{$tablet} {
+      order: 2;
+      margin-left: 75px;
+      margin-bottom: -30px;
+    }
+  }
+
+  &__item-input--mail input,
+  &__item-input--phone input {
+    @media #{$tablet} {
+      margin-left: 55px;
+      margin-bottom: 10px;
+      order: 1;
+      width: 525px;
+    }
+  }
+  /* =====  End   ====== */
+
+  &__radio-list{
+    background-color: $bg--gray;
+
+    @media #{$tablet} {
+      background-color: $bg--white;
+    }
+  }
+
+  &__list-title--radio {
+    width: 200px;
+    margin-bottom: 40px;
+      @media #{$tablet} {
+        width: 368px;
+        margin-bottom: -10px;
+        margin-top: 50px;
+      }
+  }
+
+  &__radio-list-wrapper {
+    padding-bottom: 1px;
+    position: relative;
+    z-index: 5;
+    @media #{$tablet} {
+      padding-top: 60px;
+      width: 640px;
+      padding-left: 60px;
+      border: 1px solid $bg--gray-darker;
+    }
+  }
+
+  &__radio-item {
+    margin-bottom: 60px;
+    position: relative;
+  }
+
+  &__radio-item input[type="radio"] {
+    display: none;
+  }
+
+  &__radio-item input[type="radio"] + label {
+    font-size: $fz--base;
+    line-height: 30px;
+    color: $c--blue;
+    cursor: pointer;
+    padding-left: 70px;
+  }
+
+  &__radio-item input[type="radio"] + label::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    background: $bg--white;
+    border: 2px solid $bg--gray-darker;
+    border-radius: 50%;
+    left: 0;
+    top: -3px;
+  }
+
+  &__radio-item input[type="radio"]:checked + label::before {
+    background: $bg--white url("../../img/svg-sprite/icon-circle.svg") no-repeat center;
+    background-size: 15px 15px;
+  }
+
 }

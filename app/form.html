@@ -29,7 +29,7 @@
       <nav class="main-nav  main-nav--closed  main-nav--nojs">
         <div class="main-nav__wrapper">
 
-          <a href="#">
+          <a href="index.html">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                class="logo__svg" width="146.3px" height="40.375px" viewBox="0 0 146.3 40.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
               <g>
@@ -125,9 +125,9 @@
           <button class="main-nav__toggle" type="button"> Открыть меню </button>
 
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="index.html">Главная</a></li>
-            <li class="main-nav__item"><a>Фотографии</a></li>
-            <li class="main-nav__item  main-nav__item--active"><a href="form.html">Конкурс</a></li>
+            <li class="main-nav__item"><a href="index.html"> Главная </a></li>
+            <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+            <li class="main-nav__item  main-nav__item--active"><a> Конкурс </a></li>
             <li class="main-nav__item"><a href="http://www.htmlacademy.ru" target="_blank">HTML Academy</a></li>
           </ul>
         </div>
@@ -152,6 +152,106 @@
         <p> Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже: </p>
       </div>
 
+  <form class="form__contest" action="index.html" method="post" name="contest">
+    <ul class="form__list-name">
+			<div class="form__list-name-wrapper">
+      <li class="form__item-input  form__item-name--surname">
+       <label for="surname"> Фамилия: </label>
+       <input type="text" name="surname" placeholder="Укажите фамилию" />
+     </li>
+
+     <li class="form__item-input  form__item-name--name">
+      <label for="name"> Имя: </label>
+      <input type="text" name="name" placeholder="Введите Ваше имя" />
+    </li>
+
+    <li class="form__item-input  form__item-name--patronymic">
+     <label for="patronymic"> Отчество: </label>
+     <input type="text" name="patronymic" placeholder="Ну и отчество тоже" />
+   </li>
+
+	 </div>
+
+    </ul>
+
+    <ul class="form__checkbox-list">
+			  <p class="form__list-title  form__list-title--checkbox ">Ваши безбашенные достижения в путешествии</p>
+      <div class="form__checkbox-list-wrapper">
+
+    <li class="form__checkbox-item">
+        <input id="cfirst" type="checkbox" name="first" checked hidden />
+        <label for="cfirst">Сделал селфи с акулой</label>
+    </li>
+    <li class="form__checkbox-item">
+        <input id="csecond" type="checkbox" name="second" hidden />
+        <label for="csecond">Обгорел на пляже</label>
+    </li>
+    <li class="form__checkbox-item">
+        <input id="cthird" type="checkbox" name="third" hidden/>
+        <label for="cthird">Видел Чака Норриса</label>
+    </li>
+    <li class="form__checkbox-item">
+        <input id="cfourth" type="checkbox" name="fourth" checked hidden/>
+        <label for="cfourth">Накупил сувениров</label>
+    </li>
+    <li class="form__checkbox-item">
+        <input id="cfifth" type="checkbox" name="fifth" checked hidden/>
+        <label for="cfifth">Удержал башню</label>
+    </li>
+    <li class="form__checkbox-item">
+        <input id="csixth" type="checkbox" name="sixth" checked hidden/>
+        <label for="csixth">Разгромил отель</label>
+    </li>
+    </div>
+</ul>
+
+<ul class="form__list-contact">
+	<p class="form__list-title  form__list-title--contact ">Конактная информация</p>
+	<div class="form__list-contact-wrapper">
+
+	<li class="form__item-input  form__item-input--phone">
+	 <label for="phone">
+		 <span class="form__label-phone  form__label-phone--1"> Номерок телефончика: </span>
+		 <span class="form__label-phone  form__label-phone--2"> Номер телефона </span>
+	 </label>
+	 <input class="form__input  form__input--mobile" type="text" name="phone" placeholder="Номер, пожалуйста" />
+	 <input class="form__input  form__input--tablet" type="text" name="phone" placeholder="+7 ХХХ ХХХ-ХХ-ХХ"/>
+ </li>
+
+ <li class="form__item-input  form__item-input--mail">
+	<label for="mail">
+		<span class="form__label-mail  form__label-mail--1"> Адресок почты: </span>
+		<span class="form__label-mail  form__label-mail--2"> Адрес почты </span>
+	</label>
+	<input class="form__input  form__input--mobile" type="text" name="mail" placeholder="E-mail, пожалуйста" />
+	<input class="form__input  form__input--tablet" type="text" name="mail" placeholder="Введите почту" />
+</li>
+</div>
+</ul>
+
+
+<ul class="form__radio-list">
+		<p class="form__list-title  form__list-title--radio ">С каким приложением путешествовали?</p>
+	<div class="form__radio-list-wrapper">
+
+<li class="form__radio-item">
+		<input id="rfirst" type="radio" name="first" checked hidden />
+		<label for="rfirst">Pink для iOS</label>
+</li>
+<li class="form__radio-item">
+		<input id="rsecond" type="radio" name="second" hidden />
+		<label for="rsecond">Pink на Android</label>
+</li>
+<li class="form__radio-item">
+		<input id="rthird" type="radio" name="third" hidden/>
+		<label for="rthird">Windows Phone</label>
+</li>
+
+</div>
+</ul>
+
+
+  </form>
 
     </section>
 

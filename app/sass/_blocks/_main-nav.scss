@@ -5,16 +5,13 @@
 
   &__wrapper {
     position: relative;
-    @include container;
-    width: 320px;
 
-      @media #{$tablet} {
-        width: 700px;
+    @media #{$tablet} {
       }
-
-      @media #{$desktop} {
-        width: 1120px;
-      }
+    @media #{$desktop} {
+      @include container;
+      width: 1120px;
+    }
   }
 
   &__wrapper a {
@@ -45,6 +42,7 @@
     padding: 0;
     list-style: none;
     z-index: 25;
+
   }
 
   &__item {
@@ -63,17 +61,12 @@
     background-color: $bg--blue;
     // border-top: 1px solid #485461;
     // border-bottom: 1px solid #000101;
-    box-shadow: 0 -1px 0 $c--black,
-            inset 0 1px 0 rgba($c--white, 0.15);
-
+    box-shadow: 0 -1px 0 $c--black, inset 0 1px 0 rgba($c--white, 0.15);
   }
 
   &__item:last-child a {
-  box-shadow: 0 -1px 0 $c--black,
-              inset 0 1px 0 rgba($c--white, 0.15),
-              inset 0 -1px 0 $c--black;
-
-}
+    box-shadow: 0 -1px 0 $c--black, inset 0 1px 0 rgba($c--white, 0.15), inset 0 -1px 0 $c--black;
+  }
 
   &__item a[href] {
     &:hover {
@@ -86,8 +79,6 @@
   }
 }
 @media #{$tablet-only} {
-
-
   // гамбургер
   .main-nav--closed .main-nav__toggle::before {
     content: "";
@@ -112,12 +103,7 @@
 
   .main-nav--opened .main-nav__wrapper {
     background-color: $bg--blue;
-    }
-
-  .main-nav--opened  .logo__svg {
-    padding: 25px 40px 40px 40px;
   }
-
 
   .main-nav--opened .main-nav__list {
     width: 100%;
@@ -128,10 +114,10 @@
     outline: none;
   }
   // Закрытие меню крестик
-
   .main-nav--opened .main-nav__toggle {
     border: none;
     outline: none;
+
     &::after,
     &::before {
       content: "";
@@ -163,7 +149,6 @@
     }
   }
   // profession degradation, если отключен js
-
   .main-nav--nojs .main-nav__toogle {
     display: none;
   }
@@ -197,6 +182,10 @@
     }
   }
 
+  .main-nav--opened .logo__svg {
+    padding: 25px 40px 40px;
+  }
+
   .main-nav--closed .main-nav__toggle::before {
     top: 42px;
   }
@@ -210,7 +199,6 @@
 }
 @media #{$desktop} {
   .main-nav {
-
     &__wrapper {
       @include container;
       display: flex;
@@ -244,6 +232,7 @@
 
     &__item--active a:hover {
       color: $c--pink;
+
       &::after {
         display: block;
         position: absolute;
@@ -257,9 +246,9 @@
 
     &__item--active a:active {
       color: $c--white-opacity;
+
       &::after {
         display: none;
-
       }
     }
 
@@ -275,8 +264,8 @@
     }
 
     &__item:last-child a {
-    box-shadow: none;
-      }
+      box-shadow: none;
+    }
 
     &__item a[href] {
       &:hover {
@@ -306,8 +295,9 @@
 
 .logo {
   &__svg {
-  padding: 21px 20px 0 20px;
+    padding: 21px 20px 0;
   }
+
   &__letter--tablet-desktop {
     display: none;
   }
@@ -322,57 +312,60 @@
 
   &__glasses {
     display: none;
-    }
   }
-
-
-
+}
 @media #{$tablet} {
   .logo {
     &__svg {
-    padding: 25px 40px 25px 40px;
+      padding: 25px 40px;
     }
+
     &__letter--mobile {
-    display: none;
+      display: none;
     }
+
     &__letter--tablet-desktop {
-    display: block;
+      display: block;
     }
+
     &__star {
-    display: none;
+      display: none;
     }
+
     &__glasses--tablet {
-    display: block;
+      display: block;
     }
   }
-
-  }
-
+}
 @media #{$desktop} {
   .logo {
-  &__svg {
-    padding: 25px 40px 35px 40px;
-    margin-left: -120px;
-  }
-  &__glasses--tablet {
-    display: none;
-  }
-  &__glasses--desktop {
-    display: block;
-  }
-  &__star {
-  display: block;
+    &__svg {
+      padding: 25px 40px 35px;
+      margin-left: -120px;
+    }
+
+    &__glasses--tablet {
+      display: none;
+    }
+
+    &__glasses--desktop {
+      display: block;
+    }
+
+    &__star {
+      display: block;
     }
   }
 }
 
-.logo__svg:hover  .logo__glasses,
-.logo__svg:hover  .logo__letter, {
+,
+.logo__svg:hover .logo__glasses,
+.logo__svg:hover .logo__letter {
   fill: $c--pink;
 }
 
-.logo__svg:active  .logo__letter,
-.logo__svg:active  .logo__glasses,
-.logo__svg:active  .logo__star {
+.logo__svg:active .logo__glasses,
+.logo__svg:active .logo__letter,
+.logo__svg:active .logo__star {
   fill: $bg--white-opacity;
 }
