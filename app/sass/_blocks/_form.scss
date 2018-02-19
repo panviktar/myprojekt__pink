@@ -1,10 +1,9 @@
 .form {
   color: $bg--blue;
   @include container;
-  width: 320px;
   padding-top: 20px;
   @media #{$tablet} {
-    width: 700px;
+    width: 620px;
     padding-top: 55px;
 
   }
@@ -34,6 +33,10 @@
   &__contest {
     font-size: $fz--base;
     line-height: 30px;
+    @media #{$tablet} {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__contest ul {
@@ -43,11 +46,32 @@
     padding: 0;
   }
 
-  &__list-name-wrapper {
+
+
+  /* ==============================
+  =            NAME            =
+  общме правила для INPUT
+  ============================== */
+  &__list-name {
+    @media #{$tablet} {
+      order: 1;
+    }
+  }
+
+  &__list-wrapper {
+    width: 320px;
+    @include container;
+    @media #{$tablet} {
+      width: auto;
+    }
+  }
+
+  &__list-wrapper--name {
     padding-bottom: 30px;
+
     @media #{$tablet} {
       padding-bottom: 1px;
-      width: 716px;
+      margin-right: -12px;
     }
   }
 
@@ -84,7 +108,7 @@
     border: 2px solid $bg--gray-darker;
     border-radius: 2px;
     font-size: $fz--base;
-    line-height: 30px;
+    line-height: 20px;
     color: $c--blue;
 
     &:hover {
@@ -108,21 +132,25 @@
       margin-left: 0;
     }
   }
+  /* =====  End  NAME====== */
+  /* ==============================
+  =            CHECKBOX            =
+  ============================== */
 
   &__checkbox-list {
     background-color: $bg--gray;
     @media #{$tablet} {
       background-color: $bg--white;
+      order: 4;
     }
   }
 
-  &__checkbox-list-wrapper {
+  &__list-wrapper--checkbox {
     padding-bottom: 1px;
     position: relative;
     z-index: 5;
     @media #{$tablet} {
       padding-top: 60px;
-      width: 640px;
       padding-left: 60px;
       border: 1px solid $bg--gray-darker;
     }
@@ -142,6 +170,7 @@
 
     &--checkbox {
       margin-bottom: 50px;
+      margin-top: 40px;
     }
 
     &--contact {
@@ -188,12 +217,31 @@
     top: -3px;
   }
 
+  &__checkbox-item input[type="checkbox"] + label:hover::before,
+  &__checkbox-item input[type="checkbox"]:checked + label:hover::before
+   {
+    border: 2px solid $bg--blue;
+  }
+
   &__checkbox-item input[type="checkbox"]:checked + label::before {
     background: $bg--white url("../../img/svg-sprite/icon-yes-pink.svg") no-repeat center;
     background-size: 22px 22px;
+    border: 2px solid $bg--pink;
   }
 
-  &__list-contact-wrapper {
+  /* =====  End  CHECKBOX====== */
+
+
+  /* ==============================
+  =            KONTAKT            =
+  ============================== */
+  &__list-contact {
+    @media #{$tablet} {
+      order: 3;
+  }
+}
+
+  &__list-wrapper--contact {
     padding-bottom: 15px;
     padding-top: 25px;
     @media #{$tablet} {
@@ -252,16 +300,56 @@
       margin-left: 55px;
       margin-bottom: 10px;
       order: 1;
-      width: 525px;
+      width: 450px;
+
     }
   }
-  /* =====  End   ====== */
 
+  &__item-input--phone,
+  &__item-input--mail  {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__item-input--phone::before,
+  &__item-input--mail::before {
+    @media #{$tablet} {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: $bg--gray-darker;
+    z-index: 5;
+    top: 14px;
+    right: 59px;
+  }
+}
+
+&__item-input--phone::before {
+  @media #{$tablet} {
+    background: $bg--gray-darker url("../../img/bg/icon-phone.svg") no-repeat center;
+  }
+}
+
+&__item-input--mail::before {
+  @media #{$tablet} {
+    background: $bg--gray-darker url("../../img/bg/icon-mail.svg") no-repeat center;
+  }
+}
+
+  /* =====  End KONTAKT  ====== */
+
+
+  /* ==============================
+  =            RADIOBTN            =
+  ============================== */
   &__radio-list{
     background-color: $bg--gray;
 
     @media #{$tablet} {
       background-color: $bg--white;
+      order: 2;
     }
   }
 
@@ -270,18 +358,17 @@
     margin-bottom: 40px;
       @media #{$tablet} {
         width: 368px;
+        margin-top: 0;
         margin-bottom: -10px;
-        margin-top: 50px;
-      }
+    }
   }
 
-  &__radio-list-wrapper {
+  &__list-wrapper--radio {
     padding-bottom: 1px;
     position: relative;
     z-index: 5;
     @media #{$tablet} {
       padding-top: 60px;
-      width: 640px;
       padding-left: 60px;
       border: 1px solid $bg--gray-darker;
     }
@@ -315,28 +402,44 @@
     border-radius: 50%;
     left: 0;
     top: -3px;
+      }
+
+  &__radio-item input[type="radio"] + label:hover::before,
+  &__radio-item input[type="radio"]:checked + label:hover::before {
+    border: 2px solid $bg--blue;
   }
 
-  &__radio-item input[type="radio"]:checked + label::before {
+    &__radio-item input[type="radio"]:checked + label::before {
     background: $bg--white url("../../img/svg-sprite/icon-circle.svg") no-repeat center;
     background-size: 15px 15px;
+    border: 2px solid $bg--pink;
+  }
+
+  /* =====  End RADIOBTN  ====== */
+
+  /* ==============================
+  =            TEXTAREA            =
+  ============================== */
+  &__text-list {
+    @media #{$tablet} {
+      order: 5;
+    }
   }
 
   &__list-title--text {
       @media #{$tablet} {
         width: 255px;
-        margin-top: 50px;
+        margin-top: 40px;
     }
   }
 
-  &__text-list-wrapper {
+  &__list-wrapper--text {
     padding-bottom: 1px;
     position: relative;
     z-index: 5;
     @media #{$tablet} {
       padding-top: 40px;
       padding-bottom: 40px;
-      width: 580px;
       padding-left: 60px;
       padding-right: 60px;
       border: 1px solid $bg--gray-darker;
@@ -353,19 +456,27 @@
     overflow: auto;
     line-height: 30px;
     @media #{$tablet} {
-      width: 540px;
+      width: 460px;
       height: 160px;
     }
   }
 
-  &__submit-list {
-    padding-top: 50px;
+  /* =====  End TEXTAREA  ====== */
+
+
+  /* ==============================
+  =            BTN-SUBMIT            =
+  ============================== */
+  &__list-wrapper--submit {
+    padding-top: 40px;
     padding-bottom: 20px;
 
     @media #{$tablet} {
+      width: 620px;
       display: flex;
       justify-content: space-between;
       padding: 65px 0 0 0;
+      order: 6;
     }
   }
 
@@ -379,17 +490,20 @@
     text-transform: uppercase;
     font-size: $fz--base;
     font-weight: $bold;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     cursor: pointer;
     @media #{$tablet} {
-      margin-bottom: 0;
-      width: 300px;
+      margin-bottom: 10px;
+      width: 285px;
     }
     &:hover {
       background-color: $bg--green-darker;
       }
+    &:active {
+      color: $c--white-opacity;
+    }
 
-  
+  /* =====  End BTN-SUBMIT  ====== */
   }
 
   &__text-required {
