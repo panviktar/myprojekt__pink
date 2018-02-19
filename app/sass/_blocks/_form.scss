@@ -6,7 +6,7 @@
   @media #{$tablet} {
     width: 700px;
     padding-top: 55px;
-    padding-bottom: 55px;
+
   }
   @media #{$desktop} {
     width: 1120px;
@@ -321,5 +321,86 @@
     background: $bg--white url("../../img/svg-sprite/icon-circle.svg") no-repeat center;
     background-size: 15px 15px;
   }
+
+  &__list-title--text {
+      @media #{$tablet} {
+        width: 255px;
+        margin-top: 50px;
+    }
+  }
+
+  &__text-list-wrapper {
+    padding-bottom: 1px;
+    position: relative;
+    z-index: 5;
+    @media #{$tablet} {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      width: 580px;
+      padding-left: 60px;
+      padding-right: 60px;
+      border: 1px solid $bg--gray-darker;
+    }
+  }
+
+  &__text-item textarea {
+    width: 276px;
+    height: 200px;
+    padding: 20px;
+    outline: none;
+    border: 1px solid $bg--gray-darker;
+    resize: none;
+    overflow: auto;
+    line-height: 30px;
+    @media #{$tablet} {
+      width: 540px;
+      height: 160px;
+    }
+  }
+
+  &__submit-list {
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    @media #{$tablet} {
+      display: flex;
+      justify-content: space-between;
+      padding: 65px 0 0 0;
+    }
+  }
+
+  &__submit {
+    width: 320px;
+    padding: 20px 35px;
+    color: $c--white;
+    background-color: $bg--green;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-size: $fz--base;
+    font-weight: $bold;
+    margin-bottom: 30px;
+    cursor: pointer;
+    @media #{$tablet} {
+      margin-bottom: 0;
+      width: 300px;
+    }
+    &:hover {
+      background-color: $bg--green-darker;
+      }
+
+  
+  }
+
+  &__text-required {
+    text-align: center;
+    font-size: $fz--xsmall;
+    text-transform: uppercase;
+  }
+
+  &__text-required span {
+    color: $c--pink;
+  }
+
 
 }

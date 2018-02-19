@@ -235,22 +235,39 @@
 	<div class="form__radio-list-wrapper">
 
 <li class="form__radio-item">
-		<input id="rfirst" type="radio" name="first" checked hidden />
+		<input id="rfirst" type="radio" name="radiobtn" value="iOS" checked hidden />
 		<label for="rfirst">Pink для iOS</label>
 </li>
 <li class="form__radio-item">
-		<input id="rsecond" type="radio" name="second" hidden />
+		<input id="rsecond" type="radio" name="radiobtn" value="Android" hidden />
 		<label for="rsecond">Pink на Android</label>
 </li>
 <li class="form__radio-item">
-		<input id="rthird" type="radio" name="third" hidden/>
+		<input id="rthird" type="radio" name="radiobtn" value="WP" hidden/>
 		<label for="rthird">Windows Phone</label>
 </li>
 
 </div>
 </ul>
 
+<ul class="form__text-list">
+		<p class="form__list-title  form__list-title--text ">Опишите свои эмоции</p>
+	<div class="form__text-list-wrapper">
 
+<li class="form__text-item">
+		<textarea name="text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+</li>
+
+</div>
+</ul>
+
+<div class="form__submit-list">
+	<input class="form__submit" type="submit" value="Отправить форму" name="form-contest"
+   formaction="htmlacademy.ru" formmethod="post">
+	<p class="form__text-required">
+		<span>*</span> — обязательные поля
+	</p>
+</div>
   </form>
 
     </section>
