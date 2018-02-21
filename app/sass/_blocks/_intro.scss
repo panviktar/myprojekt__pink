@@ -61,7 +61,7 @@
     min-height: 257px;
   }
   @media #{$desktop} {
-    padding-top: 142px;
+    padding-top: 135px;
     min-height: 220px;
   }
 }
@@ -130,7 +130,7 @@
     width: 100%;
     height: 645px;
     background-image: url("../img/intro/iphone-hand-desktop@1x.png");
-    background-position: 146px bottom;
+    background-position: 66px bottom;
   }
   @media #{$desktop} and (min-resolution: $retina-dpi), #{$desktop} and (min-resolution: $retina-dppx) {
     background-image: url("../img/intro/iphone-hand-desktop@2x.png");

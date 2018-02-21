@@ -227,13 +227,13 @@
       position: absolute;
       bottom: 15px;
       right: 52px;
-    bottom: 17px;
+      bottom: 17px;
     }
 
     @media #{$desktop} {
       flex-direction: row;
       width: 410px;
-      right: 195px;
+      right: 120px;
 
     }
   }

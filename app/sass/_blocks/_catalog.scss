@@ -64,7 +64,8 @@
 }
 
 .post-panorama {
-  @include container;
+  margin-left: auto;
+  margin-right: auto;
   width: 320px;
   margin-bottom: 20px;
   position: relative;
@@ -75,7 +76,8 @@
 
   }
   @media #{$desktop} {
-  max-width: 1200px;
+  width: 1040px;
+  transform: translateX(-85px);
   }
 }
 
@@ -109,7 +111,7 @@
       top: 57px;
     }
     @media #{$desktop} {
-      transform: translateX(320px);
+      transform: translateX(400px);
       top: 54px;
     }
   }
@@ -136,7 +138,7 @@
       @media #{$tablet} {
         min-height: 80px;
         margin-top: -5px;
-        width: 645px;
+        width: 560px;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
@@ -145,7 +147,7 @@
       @media #{$desktop} {
         margin-top: -3px;
         width: 880px;
-        transform: translateX(-10px);
+        transform: translateX(75px);
 
       }
     }

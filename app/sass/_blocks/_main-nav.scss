@@ -1,17 +1,9 @@
 .main-nav {
   min-height: $h--header-mobile;
-  background-color: $bg--blue-opacity-light;
   position: static;
 
   &__wrapper {
     position: relative;
-
-    @media #{$tablet} {
-      }
-    @media #{$desktop} {
-      @include container;
-      width: 1120px;
-    }
   }
 
   &__wrapper a {
@@ -200,11 +192,10 @@
 @media #{$desktop} {
   .main-nav {
     &__wrapper {
-      @include container;
       display: flex;
+      margin-right: auto;
       margin-left: auto;
-      width: 760px;
-      flex-shrink: 1;
+      width: 940px;
       justify-content: space-between;
     }
 
@@ -219,7 +210,7 @@
       flex-direction: row;
       border-top: none;
       justify-content: flex-end;
-      margin-right: 180px;
+      margin-right: 0;
     }
 
     &__item {
@@ -339,9 +330,9 @@
 }
 @media #{$desktop} {
   .logo {
+
     &__svg {
-      padding: 25px 40px 35px;
-      margin-left: -120px;
+      padding: 25px 0;
     }
 
     &__glasses--tablet {

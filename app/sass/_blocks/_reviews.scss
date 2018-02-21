@@ -1,13 +1,10 @@
+.reviews {
+  position: relative;
 
-  .reviews {
-    position: relative;
-
-    &__navigation {
-      display: none;
-    }
-
-      @media #{$desktop} {
-
+  &__navigation {
+    display: none;
+  }
+  @media #{$desktop} {
     &::before {
       content: "";
       display: block;
@@ -34,104 +31,106 @@
       border-right-color: transparent;
       cursor: pointer;
       outline: none;
+
+      &:hover {
+        border: 3px solid $bg--gray-button-darker;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+      }
+
+      &:active {
+        border: 3px solid $bg--gray;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+      }
+
       &--next {
         right: 6%;
         transform: rotate(135deg);
       }
+
       &--previous {
         left: 6%;
         transform: rotate(-45deg);
       }
     }
-    }
+  }
 
-    &__list {
-      @include container;
-      padding-top: 37px;
-      padding-bottom: 63px;
-      width: 360px;
-      position: relative;
-
-      @media #{$tablet} {
-        padding-bottom: 15px;
-        width: 700px;
-
+  &__list {
+    @include container;
+    padding-top: 37px;
+    padding-bottom: 63px;
+    width: 360px;
+    position: relative;
+    @media #{$tablet} {
+      padding-bottom: 15px;
+      width: 700px;
       @media #{$desktop} {
         padding-top: 160px;
         padding-bottom: 40px;
         width: 820px;
       }
-      }
     }
-
-    &__item {
-      text-align: center;
-
-      @media #{$tablet} {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-    }
-
-    &__author {
-      margin-bottom: 25px;
-
-        @media #{$tablet} {
-          margin-top: 25px;
-          margin-bottom: 0;
-        }
-        @media #{$desktop} {
-        margin-top: 50px;
-        }
-    }
-
-    &__author-name {
-      @include h3-mobile;
-
-        @media #{$tablet} {
-        font-size: $fz--medium;
-        }
-
-      @media #{$desktop} {
-        font-size: $fz--xmedium;
-      }
-    }
-
-    &__author-discription {
-      display: none;
-
-        @media #{$tablet} {
-          display: block;
-          font-size: $fz--xsmall;
-          color: $c--blue;
-        }
-
-        @media #{$desktop} {
-          font-size: $fz--base;;
-        }
-    }
-
-    &__author-quote {
-      font-size: $fz--xsmall;
-      line-height: 2.1;
-      color: $c--blue;
-
-        @media #{$tablet} {
-          font-size: $fz--base;
-          line-height: 1.7;
-        }
-
-        @media #{$desktop} {
-          font-size: $fz--base;
-          padding: 0 100px;
-        }
-    }
-
-
   }
 
-  .paginator {
-    &__list {
+  &__item {
+    text-align: center;
+    @media #{$tablet} {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__author {
+    margin-bottom: 25px;
+    @media #{$tablet} {
+      margin-top: 25px;
+      margin-bottom: 0;
+    }
+    @media #{$desktop} {
+      margin-top: 50px;
+    }
+  }
+
+  &__author-name {
+    @include h3-mobile;
+    @media #{$tablet} {
+      font-size: $fz--medium;
+    }
+    @media #{$desktop} {
+      font-size: $fz--xmedium;
+    }
+  }
+
+  &__author-discription {
+    display: none;
+    @media #{$tablet} {
+      display: block;
+      font-size: $fz--xsmall;
+      color: $c--blue;
+    }
+    @media #{$desktop} {
+      font-size: $fz--base;
+    }
+  }
+
+  &__author-quote {
+    font-size: $fz--xsmall;
+    line-height: 2.1;
+    color: $c--blue;
+    @media #{$tablet} {
+      font-size: $fz--base;
+      line-height: 1.7;
+    }
+    @media #{$desktop} {
+      font-size: $fz--base;
+      padding: 0 100px;
+    }
+  }
+}
+
+.paginator {
+  &__list {
     width: 65px;
     height: 15px;
     margin-bottom: 40px;
@@ -145,23 +144,27 @@
     }
   }
 
-    &__item {
-    width:6px;
+  &__item {
+    width: 6px;
     height: 6px;
     background: $bg--gray-darker;
     border-radius: 50%;
     cursor: pointer;
+
     &:hover {
       background: $bg--black-opacity-dark;
     }
+
     &:active {
       background: $bg--black-opacity-light;
     }
+
     &--active {
       background: $bg--white;
       border: 2px solid $bg--blue;
-      &:hover,
-      &:active {
+
+      &:active,
+      &:hover {
         background: $bg--white;
       }
     }
