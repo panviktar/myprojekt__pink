@@ -53,6 +53,15 @@
   padding: 0;
 }
 
+@mixin h3-tablet-popup {
+  font-size: $fz--large;
+  line-height: 1.2;
+  font-weight: $bold;
+  color: $c--black;
+  margin: 0;
+  padding: 0;
+}
+
 @mixin h3-dekstop {
   font-size: $fz--large;
   line-height: 1.2;

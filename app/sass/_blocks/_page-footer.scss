@@ -1,15 +1,12 @@
-
 .page-footer {
   min-height: 245px;
   background-color: $bg--white;
   color: $c--blue;
   width: auto;
   position: static;
-
   @media #{$tablet} {
     min-height: 130px;
   }
-
   @media #{$desktop} {
     min-height: 197px;
   }
@@ -25,30 +22,27 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
-      @media #{$tablet} {
-        min-height: 130px;
-        width: 620px;
-        padding-bottom: 35px;
-        flex-direction: row;
-      }
-
-      @media #{$desktop} {
-        min-height: 197px;
-        width: 960px;
-
-        padding-top: 75px;
-        padding-bottom: 72px;
-      }
+    @media #{$tablet} {
+      min-height: 130px;
+      width: 620px;
+      padding-top: 0;
+      padding-bottom: 0;
+      flex-direction: row;
     }
+    @media #{$desktop} {
+      min-height: 197px;
+      width: 960px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
 
   &__socials {
     width: 180px;
     font-size: 0;
     display: flex;
     justify-content: space-between;
-    }
-
+  }
 
   &__link {
     display: flex;
@@ -58,23 +52,21 @@
     border-radius: 50%;
     justify-content: center;
     align-items: center;
-
-      @media #{$tablet} {
+    @media #{$tablet} {
       margin-left: -10px;
-      }
-
-      &:hover {
-      border: 3px solid $bg--blue;
-      }
-
-      &:active {
-        opacity: 0.3;
-      }
-
-      @media #{$desktop} {
-        margin-left: 0;
-      }
     }
+
+    &:hover {
+      border: 3px solid $bg--blue;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+    @media #{$desktop} {
+      margin-left: 0;
+    }
+  }
 
   &__copyright {
     width: 130px;
@@ -83,8 +75,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0;
-
-  @media #{$desktop} {
+    @media #{$desktop} {
       width: 150px;
       font-size: $fz--base;
     }
@@ -92,9 +83,11 @@
 
   &__copyright-icon {
     fill: $c--pink;
+
     &:hover {
       fill: $bg--blue;
     }
+
     &:active {
       opacity: 0.3;
     }
@@ -102,25 +95,25 @@
 }
 
 .social-link {
-      &__tv,
-      &__fb,
-      &__yt {
-      fill: $c--pink;
-    }
+  &__fb,
+  &__tv,
+  &__yt {
+    fill: $c--pink;
   }
+}
 
 .logo-footer__svg {
-    margin-top: -10px;
+  margin-top: -10px;
 
+  &:hover .logo__letter {
+    fill: $c--pink;
+  }
 
-    &:hover .logo__letter {
-      fill: $c--pink;
-    }
-    &:active .logo__letter,
-    &:active .logo__star,
-    &:active .logo__glasses {
-      fill: $c--black-opacity;
-    }
+  &:active .logo__glasses,
+  &:active .logo__letter,
+  &:active .logo__star {
+    fill: $c--black-opacity;
+  }
 }
 
 .logo-footer__svg .logo__letter {
@@ -129,7 +122,6 @@
 
 .logo-footer__svg .logo__glasses--tablet {
   display: block;
-
   @media #{$desktop} {
     display: none;
   }

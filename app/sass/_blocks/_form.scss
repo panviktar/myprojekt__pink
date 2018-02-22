@@ -222,7 +222,6 @@
     color: $c--blue;
     cursor: pointer;
     padding-left: 70px;
-
   }
 
   &__checkbox-item input[type="checkbox"] + label::before {
@@ -278,7 +277,6 @@
       display: block;
       width: 265px;
     }
-
   }
   /* ==============================
   =  Замена наполнения формы контактов в мобильной версии и планшет-версии            =
@@ -316,7 +314,6 @@
       margin-left: 75px;
       margin-bottom: -30px;
     }
-
     @media #{$desktop} {
       margin-left: 20px;
       margin-bottom: -45px;
@@ -332,11 +329,10 @@
       order: 1;
       width: 450px;
     }
-
-      @media #{$desktop} {
-        width: 323px;
-        margin-left: 0;
-      }
+    @media #{$desktop} {
+      width: 323px;
+      margin-left: 0;
+    }
   }
 
   &__item-input--mail,
@@ -475,7 +471,6 @@
     @media #{$desktop} {
       width: 830px;
       padding-left: 70px;
-
     }
   }
 
@@ -492,10 +487,10 @@
       width: 460px;
       height: 160px;
     }
-      @media #{$desktop} {
+    @media #{$desktop} {
       width: 790px;
       height: 85px;
-      }
+    }
   }
   /* =====  End TEXTAREA  ====== */
   /* ==============================
@@ -511,9 +506,20 @@
       padding: 65px 0 0;
       order: 6;
     }
+    @media #{$desktop} {
+      width: 960px;
+    }
   }
 
   &__submit {
+    margin-bottom: 15px;
+    @media #{$tablet} {
+      margin-bottom: 10px;
+      width: 285px;
+    }
+  }
+
+  &__btn-green {
     width: 320px;
     padding: 20px 35px;
     color: $c--white;
@@ -523,12 +529,7 @@
     text-transform: uppercase;
     font-size: $fz--base;
     font-weight: $bold;
-    margin-bottom: 15px;
     cursor: pointer;
-    @media #{$tablet} {
-      margin-bottom: 10px;
-      width: 285px;
-    }
 
     &:hover {
       background-color: $bg--green-darker;
@@ -536,6 +537,11 @@
 
     &:active {
       color: $c--white-opacity;
+    }
+
+    &:disabled {
+      background: $bg--gray-light;
+      cursor: default;
     }
     /* =====  End BTN-SUBMIT  ====== */
   }
