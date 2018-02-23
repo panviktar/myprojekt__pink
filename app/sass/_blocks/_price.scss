@@ -5,15 +5,19 @@
     @include triangle;
   }
 
+  &__th {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   &__wrapper {
     padding-top: 90px;
     padding-bottom: 5px;
     @include container;
 
-
     @media #{$tablet} {
-      padding-bottom: 70px;
 
+      padding-bottom: 70px;
       }
 
     @media #{$desktop} {
@@ -53,6 +57,7 @@
   &__table-header td {
     width: 375px;
     padding: 23px 0 15px 0;
+
 
       @media #{$tablet} {
       padding: 15px 0 10px 0;
@@ -164,6 +169,7 @@
   }
 
 
+
     &--value {
       font-size: 14px;
       color: $c--blue;
@@ -178,7 +184,20 @@
         font-size: $fz--base;
         padding-left: 22px;
       }
+    }
+  }
 
+  &__list {
+    display: none;
+    @media #{$tablet} {
+      display: block;
+    }
+  }
+
+  &__list-mobile {
+    margin-bottom: 40px;
+    @media #{$tablet} {
+      display: none;
     }
   }
 }

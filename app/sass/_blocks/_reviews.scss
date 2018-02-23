@@ -59,7 +59,7 @@
   &__list {
     @include container;
     padding-top: 37px;
-    padding-bottom: 63px;
+    padding-bottom: 20px;
     width: 360px;
     position: relative;
     @media #{$tablet} {
@@ -139,6 +139,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    cursor: pointer;
     @media #{$desktop} {
       display: none;
     }
