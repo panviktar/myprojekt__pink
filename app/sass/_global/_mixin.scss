@@ -1,23 +1,20 @@
 @import "_variables";
-
 @mixin retina {
   min-resolution: 144dpi;
   min-resolution: 1.5dppx;
 }
-
+// H1
 @mixin h1 {
   font-size: $fz--xxlarge;
   line-height: 1.2;
   font-weight: $light;
 }
-
-
+// H2
 @mixin h2-mobile {
   font-size: $fz--xmedium;
   line-height: 1.2;
   font-weight: $light;
 }
-
 @mixin h2-tablet {
   font-size: $fz--xlarge;
   line-height: 1.2;
@@ -25,7 +22,6 @@
   margin: 0;
   padding: 0;
 }
-
 @mixin h2-desktop {
   font-size: $fz--xxlarge;
   line-height: 1.2;
@@ -33,7 +29,7 @@
   margin: 0;
   padding: 0;
 }
-
+// H3
 @mixin h3-mobile {
   font-size: $fz--base;
   line-height: 1.2;
@@ -43,7 +39,6 @@
   margin: 0;
   padding: 0;
 }
-
 @mixin h3-tablet {
   font-size: $fz--base;
   line-height: 1.2;
@@ -52,7 +47,6 @@
   margin: 0;
   padding: 0;
 }
-
 @mixin h3-tablet-popup {
   font-size: $fz--large;
   line-height: 1.2;
@@ -61,7 +55,6 @@
   margin: 0;
   padding: 0;
 }
-
 @mixin h3-dekstop {
   font-size: $fz--large;
   line-height: 1.2;
@@ -70,55 +63,46 @@
   margin: 0;
   padding: 0;
 }
-
+// container
 @mixin container {
   margin: 0 auto;
   min-width: $screen--mobile;
   max-width: $screen--desktop;
   padding-left: $offset--mobile;
   padding-right: $offset--mobile;
-
-
   @media #{$tablet} {
     width: $screen--tablet;
     padding-left: $offset--tablet;
     padding-right: $offset--tablet;
   }
-
-
   @media #{$desktop} {
     min-width: $screen--desktop;
     padding-left: $offset--desktop;
     padding-right: $offset--desktop;
   }
 }
-
-
+// ССЫЛКИ
 @mixin link {
   color: $c--pink;
   text-decoration: none;
   transition: all 0.3s;
-
 
   &:hover {
     color: $c--blue;
     text-decoration: underline;
   }
 
-
   &:active {
     color: $c--blue-opacity;
     text-decoration: none;
   }
 }
-
-
+// СКРЫТЬ ЭЛЕМЕНТ
 @mixin text-hide {
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
 }
-
 @mixin hidden {
   position: absolute;
   width: 1px;
@@ -129,16 +113,14 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-
 @mixin clearfix() {
-  &::after{
+  &::after {
     content: "";
     clear: both;
     display: table;
   }
 }
-
+// ТРЕУГОЛЬНИКИ ДЛЯ СТИЛИЗАЦИИ
 @mixin triangle {
   content: "";
   position: absolute;
@@ -150,7 +132,6 @@
   background: $bg--gray url(../img/bg/bg-triangle-white.svg) no-repeat center top;
   background-size: 100% 31px;
 }
-
 @mixin triangle-footer {
   content: "";
   position: absolute;
@@ -159,6 +140,6 @@
   left: 0;
   width: 100%;
   height: 47px;
-  background: url(../img/bg/bg-triangle-white-footer.svg) no-repeat center top;
+  background: url("../img/bg/bg-triangle-white-footer.svg") no-repeat center top;
   background-size: 100% 47px;
 }

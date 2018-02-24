@@ -1,47 +1,31 @@
-
 // Размер viewport
-
-$screen--mobile:  320px;
-$screen--tablet:  700px;
-$screen--desktop: 1040px;
-
-
-// $mobile: "only screen and (max-width: "$screen--tablet - 1")";
+$screen--mobile: 320px;
+$screen--tablet: 700px;
+$screen--desktop: 1040px; // $mobile: "only screen and (max-width: "$screen--tablet - 1")";
 // $mobile-tablet: "only screen and (max-width: "$screen--desktop - 1")";
 // $tablet: "only screen and (min-width: "$screen--tablet") and (max-width: "$screen--desktop - 1")";
 // $tablet-desktop: "only screen and (min-width: "$screen--tablet")";
 // $desktop: "only screen and (min-width: "$screen--desktop")";
 // На всякий случай. Точные размеры viewport, но нужно прописывать все стили для каждого
-
 $mobile: "(max-width: "$screen--tablet - 1")";
 $tablet: "(min-width: "$screen--tablet")";
 $desktop: "(min-width: "$screen--desktop")";
-$tablet-only: "(max-width: "$screen--desktop - 1")";
-
-// Ретина картинок
+$tablet-only: "(max-width: "$screen--desktop - 1")"; // Ретина картинок
 $retina-dppx: 1.5dppx;
-$retina-dpi: 144dpi;
-
-// padding
+$retina-dpi: 144dpi; // padding
 $offset--mobile: 0 20px;
 $offset--tablet: 0 40px;
-$offset--desktop: 0 40px;
-
-// Высота шапки
+$offset--desktop: 0 40px; // Высота шапки
 $h--header-mobile: 66px;
 $h--header-tablet: 110px;
 $h--header-desktop: 110px;
-
 // Цвет фона
-
 $bg--white: #fff;
 $bg--black: #000;
 $bg--gray: #f2f2f2;
 $bg--gray-light: #e5e5e5;
 $bg--gray-darker: #dddfe0;
-
 $bg--gray-button-darker: #b5b9be;
-
 $bg--pink: #d22856;
 $bg--blue: #283645;
 $bg--dark: #1d2631;
@@ -55,9 +39,7 @@ $bg--pink-opacity: rgba(210, 40, 86, 0.3);
 $bg--white-opacity: rgba(255, 255, 255, 0.3);
 $bg--black-opacity: rgba(0, 0, 0, 0.3);
 $bg--black-opacity-light: rgba(0, 0, 0, 0.1);
-$bg--black-opacity-dark: rgba(0, 0, 0, 0.5);
-
-// Цвет текста
+$bg--black-opacity-dark: rgba(0, 0, 0, 0.5); // Цвет текста
 $c--white: $bg--white;
 $c--black: $bg--black;
 $c--pink: $bg--pink;
@@ -66,25 +48,20 @@ $c--white-opacity: rgba(255, 255, 255, 0.3);
 $c--black-opacity: rgba(0, 0, 0, 0.3);
 $c--black-opacity-light: rgba(0, 0, 0, 0.1);
 $c--blue-opacity: rgba(40, 54, 69, 0.3);
-$c--pink-opacity: rgba(210, 40, 86, 0.3);
-
-
-// Шрифты
-$font-family: "Open Sans", Arial, sans-serif;
-
-// Размер шрифта
+$c--pink-opacity: rgba(210, 40, 86, 0.3); // Шрифты
+$font-family: "Open Sans", Arial, sans-serif; // Размер шрифта
 $fz--base: 18px;
-$fz--xxsmall: ceil($fz--base * 0.66);   /* 12px */
-$fz--xsmall: ceil($fz--base * 0.77);    /* 14px */
-$fz--small: ceil($fz--base * 0.88);     /* 16px */
-$fz--medium: ceil($fz--base * 1.11);    /* 20px */
-$fz--medium-btn: ceil($fz--base * 1.16);/* 21px */
-$fz--xmedium: ceil($fz--base * 1.33);   /* 24px */
-$fz--large: ceil($fz--base * 1.66);     /* 30px */
-$fz--xlarge: ceil($fz--base * 2.22);    /* 40px */
-$fz--xxlarge: ceil($fz--base * 2.77);   /* 50px */
-
+$fz--xxsmall: ceil($fz--base * 0.66); /* 12px */
+$fz--xsmall: ceil($fz--base * 0.77); /* 14px */
+$fz--small: ceil($fz--base * 0.88); /* 16px */
+$fz--medium: ceil($fz--base * 1.11); /* 20px */
+$fz--medium-btn: ceil($fz--base * 1.16); /* 21px */
+$fz--xmedium: ceil($fz--base * 1.33); /* 24px */
+$fz--large: ceil($fz--base * 1.66); /* 30px */
+$fz--xlarge: ceil($fz--base * 2.22); /* 40px */
+$fz--xxlarge: ceil($fz--base * 2.77);
+/* 50px */
 // Жирность шрифта
 $normal: 400;
-$bold:   700;
-$light:  300;
+$bold: 700;
+$light: 300;

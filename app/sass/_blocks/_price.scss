@@ -1,203 +1,184 @@
 .price {
   background-color: $bg--gray;
   position: relative;
+  padding-top: 65px;
+  text-transform: uppercase;
+  overflow: hidden;
+
   &::after {
     @include triangle;
+    height: 31px;
+
+      @media #{$tablet} {
+        height: 55px;
+        background-size: 100% 55px;
+      }
+      @media #{$desktop} {
+        height: 80px;
+        background-size: 100% 80px;
+      }
+
+
   }
 
-  &__th {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  &__wrapper {
+  @media #{$tablet} {
     padding-top: 90px;
-    padding-bottom: 5px;
-    @include container;
-
-    @media #{$tablet} {
-
-      padding-bottom: 70px;
-      }
-
-    @media #{$desktop} {
-      padding-top: 146px;
-      padding-bottom: 95px;
-    }
+    padding-bottom: 40px;
   }
 
-  &__list {
-    text-transform: uppercase;
-    border-collapse: collapse;
-    margin-bottom: 40px;
-
-    @media #{$tablet} {
-    max-width: 620px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0;
-      }
-
-    @media #{$desktop} {
-    max-width: 1020px;
-    }
+  @media #{$desktop} {
+    padding-top: 150px;
+    padding-bottom: 80px;
   }
 
-  &__list td {
-    border: 2px solid $bg--gray-darker;
+}
 
+.price-table {
+  @include container;
+  text-align: center;
+  position: relative;
+  width:  845px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 30px;
+
+  @media #{$tablet} {
+    position: static;
+    margin: 0 auto 26px;
+    width: 700px;
+    transform: none;
   }
 
-  &__table-header {
+  @media #{$desktop} {
+    width: 1120px;
+  }
+
+  &__header {
+    position: relative;
+    width: 25%;
+    padding-top: 11px;
+    padding-bottom: 11px;
     background-color: $bg--blue;
     color: $c--white;
-    text-align: center;
-  }
-
-  &__table-header td {
-    width: 375px;
-    padding: 23px 0 15px 0;
-
-
-      @media #{$tablet} {
-      padding: 15px 0 10px 0;
-      width: 155px;
-      }
-      @media #{$desktop} {
-      padding: 23px 0 15px 0;
-      width: 285px;
-      }
-  }
-
-  &__table-header .price__header  {
-    border-top: 2px solid $bg--gray;
+    border: 2px solid #e5e5e5;
+    border-top: 2px solid $bg--blue;
     border-bottom: 2px solid $bg--blue;
-    border-right: 2px solid $bg--gray-darker;
-    &--standart {
-      position: relative;
-      overflow: hidden;
 
+    @media #{$tablet} {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    @media #{$desktop} {
+      padding-top: 11px;
+      padding-bottom: 11px;
     }
   }
 
-  &__header-hit {
-    position: absolute;
-    display: block;
-    width: 100px;
-    transform: rotate(-45deg);
-    background-color: $bg--pink;
-    font-size: $fz--xsmall;
-    line-height: 25px;
-    top: 0;
-    left: -18%;
-    padding-right: 15px;
-
-
-      @media #{$tablet} {
-        top: 2%;
-        left: -22%;
-        line-height: 25px;
-      }
-
-      @media #{$desktop} {
-        top: 2%;
-        left: -12%;
-        line-height: 30px;
-      }
-  }
-
-  &__header-name {
+  &__title {
     font-size: $fz--base;
     font-weight: $bold;
-
-      @media #{$tablet} {
-        font-size: $fz--small;
-      }
-
-      @media #{$desktop} {
-        font-size: $fz--base;
-      }
+    line-height: 1.2;
   }
 
-  &__header-usd {
+  &__cost {
     font-size: $fz--xmedium;
     font-weight: $light;
-    line-height: 40px;
+    line-height: 1;
 
     @media #{$tablet} {
       font-size: $fz--base;
-      line-height: 32px;
+      line-height: 0.8;
     }
 
     @media #{$desktop} {
       font-size: $fz--xmedium;
-      line-height: 40px;
+      line-height: 1;
     }
   }
 
-  &__table-header .price__header--features {
-    border: 2px solid $bg--gray;
-    border-bottom: 2px solid $bg--gray-darker;
-    background-color: $bg--gray;
-    font-size: 0;
+  &__flag {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    z-index: 10;
+    width: 72px;
+    height: 72px;
+    text-indent: -1000px;
+    overflow: hidden;
   }
 
-  &__field {
-    background-color: $bg--white;
-    font-size: 0;
-    padding: 22px 0;
+  &__flag--hit {
+    background: url("../img/bg/flag_hit.png") no-repeat 0 0;
+  }
+}
 
+.price-table__service {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 25px;
+  font-size: $fz--xsmall;
+  text-align: left;
+  background-color: $bg--white;
+  background-repeat: no-repeat;
+  background-position: 89% 50%;
+  border: 2px solid #e5e5e5;
 
-    @media #{$tablet} {
-    padding: 17px 0 15px 0;
-    }
+  @media #{$tablet} {
+    background-position: 50% 50%;
+    padding-top: 11px;
+    padding-left: 15px;
+    padding-bottom: 11px;
+  }
 
-    @media #{$desktop} {
-      padding: 22px 0 20px 0;
-    }
+  @media #{$tablet} {
+    background-position: 50% 50%;
+    padding-top: 15px;
+    padding-left: 19px;
+    padding-bottom: 15px;
+  }
 
-    &--on {
+  &--yes {
     background-image: url("../img/svg-sprite/icon-yes.svg");
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
-    &--off {
+  &--no {
     background-image: url("../img/svg-sprite/icon-no.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  }
+}
+
+
+.price-table__header--empty {
+  display: none;
+
+  @media #{$tablet} {
+    display: block;
+    opacity: 0;
+    border: none;
+  }
+}
+
+.price-table__service--tablet {
+  display: none;
+  background: none;
+
+  @media #{$tablet} {
+    display: table-cell;
+    background-color: $bg--white;
+    font-size: $fz--xsmall;
+    text-transform: none;
   }
 
-
-
-    &--value {
-      font-size: 14px;
-      color: $c--blue;
-      padding-left: 22px;
-
-      @media #{$tablet} {
-        padding-left: 15px;
-        text-transform: none;
-      }
-
-      @media #{$desktop} {
-        font-size: $fz--base;
-        padding-left: 22px;
-      }
-    }
+  @media #{$desktop} {
+    font-size: $fz--base;
   }
+}
 
-  &__list {
+.service-mobile {
+
+  @media #{$tablet} {
     display: none;
-    @media #{$tablet} {
-      display: block;
-    }
-  }
-
-  &__list-mobile {
-    margin-bottom: 40px;
-    @media #{$tablet} {
-      display: none;
-    }
   }
 }

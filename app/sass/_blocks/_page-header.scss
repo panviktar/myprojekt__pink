@@ -8,7 +8,6 @@
   color: $c--white;
   width: 100%;
   z-index: 99;
-
   @media #{$tablet} {
     min-height: 110px;
   }
@@ -16,13 +15,12 @@
   &--full {
     position: absolute;
     background-color: $c--black-opacity;
-    }
+  }
 }
 
 .page-header__wrapper {
   width: 100%;
-
-   @media #{$desktop} {
+  @media #{$desktop} {
     width: 940px;
     margin-left: auto;
     margin-right: auto;

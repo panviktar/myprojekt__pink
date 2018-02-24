@@ -3,7 +3,13 @@
   position: static;
 
   &__wrapper {
+    width: 320px;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    @media #{$tablet} {
+      width: 680px;
+    }
   }
 
   &__wrapper a {
@@ -34,7 +40,6 @@
     padding: 0;
     list-style: none;
     z-index: 25;
-
   }
 
   &__item {
@@ -330,7 +335,6 @@
 }
 @media #{$desktop} {
   .logo {
-
     &__svg {
       padding: 25px 0;
     }

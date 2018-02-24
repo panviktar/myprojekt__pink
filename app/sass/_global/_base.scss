@@ -1,12 +1,12 @@
 @import "_variables";
 @import "_mixin";
 
-html{
+html {
   box-sizing: border-box;
 }
 // Свойства width и height включают в себя значения полей и границ, но не отступов (margin)
 
-body{
+body {
   position: relative;
   min-width: $screen--mobile;
   font-size: $fz--base;

@@ -1,16 +1,13 @@
 .contacts {
-
-  &__wrapper{
+  &__wrapper {
     @include container;
     padding-top: 35px;
     padding-bottom: 40px;
     text-align: center;
-
     @media #{$tablet} {
       padding-top: 50px;
       padding-bottom: 0;
     }
-
     @media #{$desktop} {
       padding-top: 65px;
       padding-bottom: 0;
@@ -20,12 +17,10 @@
   &__title {
     @include h2-mobile;
     margin-bottom: 20px;
-
     @media #{$tablet} {
       @include h2-tablet;
       margin-bottom: 20px;
     }
-
     @media #{$desktop} {
       @include h2-desktop;
       margin-bottom: 50px;
@@ -35,26 +30,23 @@
   &__column {
     display: flex;
     flex-direction: column;
-
-      @media #{$tablet} {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        }
+    @media #{$tablet} {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
     }
+  }
 
   &__item {
     padding: 14px 0;
-
-      @media #{$tablet} {
-        padding: 25px 0 15px 0;
-        width: 310px;
-      }
-
-      @media #{$desktop} {
-        width: 313px;
-        padding-bottom: 0;
-      }
+    @media #{$tablet} {
+      padding: 25px 0 15px;
+      width: 310px;
+    }
+    @media #{$desktop} {
+      width: 313px;
+      padding-bottom: 0;
+    }
 
     &--phone {
       @media #{$desktop} {
@@ -78,7 +70,6 @@
   &__info {
     display: block;
     margin-top: 8px;
-
     @media #{$desktop} {
       margin-top: 20px;
     }
@@ -91,17 +82,15 @@
     font-size: $fz--xmedium;
 
     &:hover::after {
-        display: block;
-        position: absolute;
-        content: "";
-        height: 2px;
-        width: 100%;
-        background-color: $bg--pink;
-        bottom: 15px;
-      }
+      display: block;
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 100%;
+      background-color: $bg--pink;
+      bottom: 15px;
     }
-
-
+  }
 
   &__map {
     position: relative;
@@ -110,26 +99,22 @@
     background-repeat: no-repeat;
     background-position: center;
     height: 200px;
-
-      @media #{$tablet} {
-        background-image: url("../img/bg/map-tablet-desktop.jpg");
-        height: 380px;
-        background-size: 700px 380px;
-      }
-
-      @media #{$desktop} {
-        height: 505px;
-        background-size: 1200px 505px;
-      }
+    @media #{$tablet} {
+      background-image: url("../img/bg/map-tablet-desktop.jpg");
+      height: 380px;
+      background-size: 700px 380px;
+    }
+    @media #{$desktop} {
+      height: 505px;
+      background-size: 1200px 505px;
+    }
 
     &::before {
       @include triangle-footer;
-
       @media #{$tablet} {
         height: 75px;
         background-size: 100% 75px;
       }
-
       @media #{$desktop} {
         height: 107px;
         background-size: 100% 107px;

@@ -285,44 +285,48 @@
 
 		<section class="price">
 
-			<div class="price__wrapper">
+				<table class="price-table">
+        <tr>
+          <td class="price-table__header price-table__header--empty"></td>
+          <td class="price-table__header">
+            <div class="price-table__flag">Хит</div>
+            <p class="price-table__title">База</p>
+            <p class="price-table__cost">1,99 USD</p>
+          </td>
+          <td class="price-table__header">
+            <div class="price-table__flag price-table__flag--hit">Хит</div>
+            <p class="price-table__title">Стандарт</p>
+            <p class="price-table__cost">3,99 USD</p>
+          </td>
+          <td class="price-table__header">
+            <div class="price-table__flag">Хит</div>
+            <p class="price-table__title">Анлим</p>
+            <p class="price-table__cost">9,99 USD</p>
+          </td>
+        </tr>
 
-				<table class="price__list-mobile">
+        <tr>
+          <td class="price-table__service price-table__service--tablet">Розовый фильтр</td>
+          <td class="price-table__service price-table__service--yes"><span class="service-mobile">Розовый фильтр</span></td>
+          <td class="price-table__service price-table__service--yes"><span class="service-mobile">Розовый фильтр</span></td>
+          <td class="price-table__service price-table__service--yes"><span class="service-mobile">Розовый фильтр</span></td>
+        </tr>
 
+        <tr>
+          <td class="price-table__service price-table__service--tablet">Смайлики</td>
+          <td class="price-table__service price-table__service--no"><span class="service-mobile">Смайлики</span></td>
+          <td class="price-table__service price-table__service--yes"><span class="service-mobile">Смайлики</span></td>
+          <td class="price-table__service price-table__service--yes"><span class="service-mobile">Смайлики</span></td>
+        </tr>
 
+        <tr>
+          <td class="price-table__service price-table__service--tablet">Комментарии</td>
+          <td class="price-table__service price-table__service--no"><span class="service-mobile">Комментарии</span></td>
+          <td class="price-table__service price-table__service--no"><span class="service-mobile">Комментарии</span></td>
+          <td class="price-table__service price-table__service--yes"><span class="service-mobile">Комментарии</span></td>
+        </tr>
+      </table>
 
-				<tr class="price__table-header  price__table-header--mobile">
-					<td class="price__header  price__header--features">
-						<span class="price__features-opacity"> Опции </span>
-					</td>
-
-					<td class="price__header  price__header--standart">
-						<span class="price__header-hit"> Хит </span>
-						<span class="price__header-name">	Стандарт	</span> <br>
-						<span class="price__header-usd"> 3,99 USD </span>
-					</td>
-
-				</tr>
-
-				<tr>
-					<td class="price__field  price__field--value"> Розовый фильтр </td>
-
-					<td class="price__field  price__field--on  price__field--mobile"> Включено </td>
-
-				</tr>
-				<tr>
-					<td class="price__field  price__field--value"> Смайлики </td>
-
-					<td class="price__field  price__field--off  price__field--mobile"> Не включено </td>
-
-				</tr>
-				<tr>
-					<td class="price__field  price__field--value"> Комментарии </td>
-
-					<td class="price__field  price__field--off  price__field--mobile"> Не включено </td>
-
-				</tr>
-				</table>
 
 				<div class="price__paginator  paginator__list  paginator-off ">
 					<span class="paginator__item"></span>
@@ -330,51 +334,7 @@
 					<span class="paginator__item"></span>
 				</div>
 
-				<table class="price__list">
-					<tr class="price__table-header">
-						<td class="price__header  price__header--features">
-							<span class="price__features-opacity"> Опции </span>
-						</td>
-						<td class="price__header  price__field--th">
-							<span class="price__header-name"> База </span> <br>
-							<span class="price__header-usd"> 1,99 USD	</span>
-						</td>
-						<td class="price__header  price__header--standart">
-							<span class="price__header-hit"> Хит </span>
-							<span class="price__header-name">	Стандарт	</span> <br>
-							<span class="price__header-usd"> 3,99 USD </span>
-						</td>
-						<td class="price__header  price__field--th">
-							<span class="price__header-name">	Анлим	</span> <br>
-							<span class="price__header-usd">	9,99 USD </span>
-						</td>
-					</tr>
-
-					<tr>
-						<td class="price__field  price__field--value"> Розовый фильтр </td>
-						<td class="price__field  price__field--on  price__field--th"> Включено </td>
-						<td class="price__field  price__field--on"> Включено </td>
-						<td class="price__field  price__field--on  price__field--th"> Включено </td>
-					</tr>
-					<tr>
-						<td class="price__field  price__field--value"> Смайлики </td>
-						<td class="price__field  price__field--off  price__field--th"> Не включено </td>
-						<td class="price__field  price__field--off"> Не включено </td>
-						<td class="price__field  price__field--on  price__field--th"> Включено </td>
-					</tr>
-					<tr>
-						<td class="price__field  price__field--value"> Комментарии </td>
-						<td class="price__field  price__field--off  price__field--th"> Не включено </td>
-						<td class="price__field  price__field--off"> Не включено </td>
-						<td class="price__field  price__field--off  price__field--th"> Не включено </td>
-					</tr>
-
-
-				</table>
-
-
-
-			</div>
+			
 
 		</section>
 
@@ -383,27 +343,27 @@
 
 			<div class="contacts__wrapper">
 
-			<h2 class="contacts__title"> Остались вопросы? <br>
+				<h2 class="contacts__title"> Остались вопросы? <br>
 				Свяжитесь с нами! </h2>
 
 
-	<div class="contacts__column">
-				<div class="contacts__item  contacts__item--phone">
-					<span> <b> Звоните: </b> </span> <br>
-					<span class="contacts__info"> <a href="tel:+7 (812) 555 66 66"> +7 (812) 555-66-66 </a> </span>
-				</div>
+				<div class="contacts__column">
+					<div class="contacts__item  contacts__item--phone">
+						<span> <b> Звоните: </b> </span> <br>
+						<span class="contacts__info"> <a href="tel:+7 (812) 555 66 66"> +7 (812) 555-66-66 </a> </span>
+					</div>
 
-				<div class="contacts__item  contacts__item--mail">
-					<span> <b> Пишите: </b> </span> <br>
-					<span class="contacts__info"> <a href="mailto:htmlacademy@mail.ru"> mail@htmlacademy.ru </a> </span>
-				</div>
+					<div class="contacts__item  contacts__item--mail">
+						<span> <b> Пишите: </b> </span> <br>
+						<span class="contacts__info"> <a href="mailto:htmlacademy@mail.ru"> mail@htmlacademy.ru </a> </span>
+					</div>
 
-				<div class="contacts__item  contacts__item--adres">
-					<span> <b> Приезжайте в гости: </b> </span> <br>
-					<span class="contacts__info"> <a href="#"> ул. Большая <br> Конюшенная,
+					<div class="contacts__item  contacts__item--adres">
+						<span> <b> Приезжайте в гости: </b> </span> <br>
+						<span class="contacts__info"> <a href="#"> ул. Большая <br> Конюшенная,
 						19/8 </a> </span>
+					</div>
 				</div>
-			</div>
 			</div>
 			<div class="contacts__map-wrapper">
 				<div class="contacts__map"> Карта </div>
